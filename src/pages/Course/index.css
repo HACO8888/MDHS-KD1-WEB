@@ -1,0 +1,62 @@
+.table-wrap {
+    width: 80%;
+    margin-left: 10%;
+}
+
+table {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: gray;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+tbody {
+    background-color: rgb(63, 60, 60);
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+
+tr {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-collapse: collapse;
+
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.week-title {
+    font-weight: bolder;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.half {
+    width:16%
+}
