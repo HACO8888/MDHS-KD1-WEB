@@ -3,26 +3,10 @@ import axios from "axios";
 import React from "react"
 import './index.css';
 
-
-<<<<<<< Updated upstream
 const api = axios.create({
 	baseURL: "https://newmdcloud.loca.lt"
 });
 
-function Read() {
-	api.post("/cloud/database/read",
-		JSON.stringify(),
-		{
-			headers: {
-				"access-control-expose-headers": "Authorization",
-				"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJRMTI0NzUxNTcxIiwidXNlclBXRCI6ImFhYWFAbmV3bWQiLCJyZW1lbWJlck1lIjoidHJ1ZSIsImlhdCI6MTY2NDExNDg5NiwiZXhwIjoxNjY0NzE5Njk2fQ.oCVYRmY15E5556hBN3zxK8sEeTPskpkJyj3Qd6D03_Q",
-				"Content-Type": "application/json",
-				"Bypass-Tunnel-Reminder": "true",
-			},
-		}
-	).then(function(response) { console.log(response) })
-}
-=======
 export default function Course() {
 
   const [post, setPost] = React.useState(null);
@@ -43,21 +27,8 @@ export default function Course() {
     });
   }, []);
 
->>>>>>> Stashed changes
-
   if (!post) return setPost(Read());;
   // console.log(Read())
-
-<<<<<<< Updated upstream
-export default function Course() {
-	return (
-		<div>
-			<br />
-			Course
-		</div>
-	)
-}
-=======
   return (
     <div className="TablePage_background">
       <br />
@@ -157,6 +128,7 @@ export default function Course() {
     </div>
   )
 }
+
 function Read() {
   const post2 = {
     "table": {
@@ -512,5 +484,3 @@ function Read() {
   }
   return post2
 }
-
->>>>>>> Stashed changes
