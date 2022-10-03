@@ -35,7 +35,7 @@ export default function Course() {
         <table className="table">
           <thead className="thead-primary">
             <tr>
-              <th colspan="2" className="half">節數/時間</th>
+              <th colSpan="2" className="half">節數/時間</th>
               <th>星期一</th>
               <th>星期二</th>
               <th>星期三</th>
