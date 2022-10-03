@@ -3,10 +3,6 @@ import axios from "axios";
 import React from "react"
 import './index.css';
 
-const api = axios.create({
-	baseURL: "https://newmdcloud.loca.lt"
-});
-
 export default function Course() {
 
   const [post, setPost] = React.useState(null);
