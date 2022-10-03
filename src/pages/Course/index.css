@@ -1,6 +1,7 @@
 .table-wrap {
     width: 80%;
     margin-left: 10%;
+    text-align: center;
 }
 
 table {
@@ -47,6 +48,7 @@ td {
     vertical-align: middle;
     border: 1px solid white;
     border-collapse: collapse;
+    height: 200px
 }
 
 .week-title {
@@ -58,5 +60,239 @@ td {
 }
 
 .half {
-    width:16%
+    width: 16%
+}
+
+.day {
+    width: 17%;
+}
+
+
+td.chinese>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.chinese>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Chinese.png');
+}
+
+td.chinese>p:hover::before {
+    opacity: 0.6;
+}
+
+td.math>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.math>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Math.png');
+}
+
+td.math>p:hover::before {
+    opacity: 0.6;
+}
+
+
+td.english>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.english>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/English.png');
+}
+
+td.english>p:hover::before {
+    opacity: 0.6;
+}
+
+td.instructor>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.instructor>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Instructor.png');
+}
+
+td.instructor>p:hover::before {
+    opacity: 0.6;
+}
+
+td.pe>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.pe>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/PE.png');
+}
+
+td.pe>p:hover::before {
+    opacity: 0.6;
+}
+
+
+td.basic-electricity>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.basic-electricity>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Basic_Electricity.png');
+}
+
+td.basic-electricity>p:hover::before {
+    opacity: 0.6;
+}
+
+td.basic-electricity-study>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.basic-electricity-study>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Basic_Electricity_Study.png');
+}
+
+td.basic-electricity-study>p:hover::before {
+    opacity: 0.6;
+}
+
+td.music>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.music>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Music.png');
+}
+
+td.leader>p:hover::before {
+    opacity: 0.6;
+}
+
+td.leader>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.leader>p::before {
+    content: "";
+    position: absolute;
+    top: -360%;
+    left: -3%;
+    width: 107%;
+    height: 820%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Leader.png');
+}
+
+td.leader>p:hover::before {
+    opacity: 0.6;
+}
+
+td.esl>p {
+    position: relative;
+    z-index: 1;
+}
+
+td.esl>p::before {
+    content: "";
+    position: absolute;
+    top: -270%;
+    left: -3%;
+    width: 107%;
+    height: 840%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/ESL.png');
+}
+
+td.esl>p:hover::before {
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    td.pic>p::before {
+        background-image: none;
+    }
 }

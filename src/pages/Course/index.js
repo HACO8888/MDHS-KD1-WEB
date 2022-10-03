@@ -36,46 +36,46 @@ export default function Course() {
           <thead className="thead-primary">
             <tr>
               <th colSpan="2" className="half">節數/時間</th>
-              <th>星期一</th>
-              <th>星期二</th>
-              <th>星期三</th>
-              <th>星期四</th>
-              <th>星期五</th>
+              <th className="day">星期一</th>
+              <th className="day">星期二</th>
+              <th className="day">星期三</th>
+              <th className="day">星期四</th>
+              <th className="day">星期五</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th >第<br />一<br />節</th>
               <th>08:15<br />｜<br />09:05</th>
-              <td>{post.table.day1[1].classname}</td>
-              <td>{post.table.day2[1].classname}</td>
+              <td className="pic pe"><p>{post.table.day1[1].classname}</p></td>
+              <td className="pic chinese"><p>{post.table.day2[1].classname}</p></td>
               <td>{post.table.day3[1].classname}</td>
               <td>{post.table.day4[1].classname}</td>
-              <td>{post.table.day5[1].classname}</td>
+              <td className="pic math"><p>{post.table.day5[1].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />二<br />節</th>
               <th>09:15<br />｜<br />10:05</th>
-              <td>{post.table.day1[2].classname}</td>
-              <td>{post.table.day2[2].classname}</td>
+              <td className="pic pe"><p>{post.table.day1[2].classname}</p></td>
+              <td className="pic basic-electricity-study"><p>{post.table.day2[2].classname}</p></td>
               <td>{post.table.day3[2].classname}</td>
               <td>{post.table.day4[2].classname}</td>
-              <td>{post.table.day5[2].classname}</td>
+              <td className="pic english"><p>{post.table.day5[2].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />三<br />節</th>
               <th >10:15<br />｜<br />11:05</th>
-              <td>{post.table.day1[3].classname}</td>
-              <td>{post.table.day2[3].classname}</td>
+              <td className="pic basic-electricity"><p>{post.table.day1[3].classname}</p></td>
+              <td className="pic basic-electricity-study"><p>{post.table.day2[3].classname}</p></td>
               <td>{post.table.day3[3].classname}</td>
-              <td>{post.table.day4[3].classname}</td>
-              <td>{post.table.day5[3].classname}</td>
+              <td className="pic chinese"><p>{post.table.day4[3].classname}</p></td>
+              <td className="pic instructor"><p>{post.table.day5[3].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />四<br />節</th>
               <th >11:15<br />｜<br />12:05</th>
-              <td>{post.table.day1[4].classname}</td>
-              <td>{post.table.day2[4].classname}</td>
+              <td className="pic math"><p>{post.table.day1[4].classname}</p></td>
+              <td className="pic basic-electricity-study"><p>{post.table.day2[4].classname}</p></td>
               <td>{post.table.day3[4].classname}</td>
               <td>{post.table.day4[4].classname}</td>
               <td>{post.table.day5[4].classname}</td>
@@ -83,10 +83,10 @@ export default function Course() {
             <tr>
               <th >第<br />五<br />節</th>
               <th>13:20<br />｜<br />14:10</th>
-              <td>{post.table.day1[5].classname}</td>
-              <td>{post.table.day2[5].classname}</td>
+              <td className="pic music"><p>{post.table.day1[5].classname}</p></td>
+              <td className="pic math"><p>{post.table.day2[5].classname}</p></td>
               <td>{post.table.day3[5].classname}</td>
-              <td>{post.table.day4[5].classname}</td>
+              <td className="pic math"><p>{post.table.day4[5].classname}</p></td>
               <td><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
             </tr>
             <tr>
@@ -94,8 +94,8 @@ export default function Course() {
               <th>14:20<br />｜<br />15:10</th>
               <td>{post.table.day1[6].classname}</td>
               <td>{post.table.day2[6].classname}</td>
-              <td>{post.table.day3[6].classname}</td>
-              <td>{post.table.day4[6].classname}</td>
+              <td className="pic basic-electricity"><p>{post.table.day3[6].classname}</p></td>
+              <td className="pic english"><p>{post.table.day4[6].classname}</p></td>
               <td><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
             </tr>
             <tr>
@@ -103,18 +103,18 @@ export default function Course() {
               <th>15:20<br />｜<br />16:10</th>
               <td>{post.table.day1[7].classname}</td>
               <td>{post.table.day2[7].classname}</td>
-              <td>{post.table.day3[7].classname}</td>
-              <td>{post.table.day4[7].classname}</td>
-              <td>{post.table.day5[7].classname}</td>
+              <td className="pic basic-electricity"><p>{post.table.day3[7].classname}</p></td>
+              <td className="pic leader"><p>{post.table.day4[7].classname}</p></td>
+              <td className="pic leader"><p>{post.table.day5[7].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />八<br />節</th>
               <th>16:20<br />｜<br />17:10</th>
               <td>{post.table.day1[8].classname}</td>
-              <td>{post.table.day2[8].classname}</td>
-              <td>{post.table.day3[8].classname}</td>
-              <td>{post.table.day4[8].classname}</td>
-              <td>{post.table.day5[8].classname}</td>
+              <td className="pic english"><p>{post.table.day2[8].classname}</p></td>
+              <td className="pic chinese"><p>{post.table.day3[8].classname}</p></td>
+              <td className="pic leader"><p>{post.table.day4[8].classname}</p></td>
+              <td className="pic esl"><p>英語會話A(輔)</p><br /><a>英語會話B(輔)</a></td>
             </tr>
           </tbody>
         </table>
