@@ -1,5 +1,5 @@
 <h1>MDHS K1D1 WEB</h1>
-<h3>Site Link : <a href="https://k1d1.haco.tw" title="NewMD">Click Me</a></h3>
+<h3>Site Link : <a href="https://k1d1.haco.tw" title="MDHS-K1D1">Click Me</a></h3>
 
 <h2>Website status</h2>
 <a href="https://app.netlify.com/sites/mdhs-k1d1/deploys" title="Netlify Status">
