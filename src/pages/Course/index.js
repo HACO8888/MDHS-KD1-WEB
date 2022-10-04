@@ -8,7 +8,7 @@ export default function Course() {
   const [post, setPost] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get("https://newmdcloud.loca.lt/cloud/database/read",
+    axios.get("http://aaaa.zapto.org/cloud/database/read",
       {
         headers: {
           "access-control-expose-headers": "Authorization",
@@ -18,6 +18,7 @@ export default function Course() {
         },
       }
     ).then((response) => {
+      console.log("API Response:" + response.status + " => " + response.statusText)
       setPost(response.data);
       // setPost(Read());
     });
@@ -30,6 +31,8 @@ export default function Course() {
       <br />
       <br />
       <h1 className="title">本學期課表</h1>
+      <br />
+      <p className="info">如圖片有被拉伸的狀況是故意所為</p>
       <br />
       <div className="table-wrap">
         <table className="table">
@@ -76,7 +79,7 @@ export default function Course() {
               <th >11:15<br />｜<br />12:05</th>
               <td className="pic math"><p>{post.table.day1[4].classname}</p></td>
               <td className="pic basic-electricity-study"><p>{post.table.day2[4].classname}</p></td>
-              <td>{post.table.day3[4].classname}</td>
+              <td className="pic english"><p>{post.table.day3[4].classname}</p></td>
               <td>{post.table.day4[4].classname}</td>
               <td>{post.table.day5[4].classname}</td>
             </tr>
@@ -87,7 +90,7 @@ export default function Course() {
               <td className="pic math"><p>{post.table.day2[5].classname}</p></td>
               <td>{post.table.day3[5].classname}</td>
               <td className="pic math"><p>{post.table.day4[5].classname}</p></td>
-              <td><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
+              <td className="pic chinese"><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
             </tr>
             <tr>
               <th >第<br />六<br />節</th>
@@ -96,7 +99,7 @@ export default function Course() {
               <td>{post.table.day2[6].classname}</td>
               <td className="pic basic-electricity"><p>{post.table.day3[6].classname}</p></td>
               <td className="pic english"><p>{post.table.day4[6].classname}</p></td>
-              <td><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
+              <td className="pic chinese"><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
             </tr>
             <tr>
               <th >第<br />七<br />節</th>
