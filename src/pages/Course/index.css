@@ -48,7 +48,7 @@ td {
     vertical-align: middle;
     border: 1px solid white;
     border-collapse: collapse;
-    height: 200px
+    height: 182px
 }
 
 .week-title {
@@ -60,11 +60,11 @@ td {
 }
 
 .half {
-    width: 16%
+    width: 10%;
 }
 
 .day {
-    width: 17%;
+    width: 15%;
 }
 
 
@@ -88,7 +88,7 @@ td.chinese::before {
 }
 
 td.chinese:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -112,7 +112,7 @@ td.math::before {
 }
 
 td.math:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -137,7 +137,7 @@ td.english::before {
 }
 
 td.english:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -161,7 +161,7 @@ td.instructor::before {
 }
 
 td.instructor:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -185,7 +185,7 @@ td.pe::before {
 }
 
 td.pe:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -210,7 +210,7 @@ td.basic-electricity::before {
 }
 
 td.basic-electricity:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -234,7 +234,7 @@ td.basic-electricity-study::before {
 }
 
 td.basic-electricity-study:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -258,7 +258,7 @@ td.music::before {
 }
 
 td.music:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -282,7 +282,7 @@ td.leader::before {
 }
 
 td.leader:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -305,7 +305,7 @@ td.esl::before {
 }
 
 td.esl:hover::before {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
