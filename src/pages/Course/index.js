@@ -1,11 +1,51 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import axios from "axios";
 import React from "react"
 import './index.css';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import CloseButton from 'react-bootstrap/CloseButton';
+import * as Icon from 'react-bootstrap-icons';
+
+const post3 =
+{
+  "table": {
+    "1": {
+      "classname": "國語文",
+      "teacher": "陳聯華",
+      "classID": "1945528",
+      "meet": "https://meet.google.com/jhn-oghj-vqn",
+      "classroom": "lsbr6d2"
+    },
+    "2": {
+      "classname": "基本電學實習",
+      "meet": "https://meet.google.com/opn-ubpu-faj、vtp-xurj-cgh",
+      "classroom": "64znh35 (柯尚仁)、5v4an56 (尤振輝)"
+    },
+    "3": {
+      "classname": "基礎電子實習",
+      "meet": "https://meet.google.com/awr-ddyu-cgd、obr-jvhx-owr",
+      "classroom": "hrn5wf5 (林順進)、n5sz7dd (黃凱威)"
+    },
+    "day1": {
+      "1": {
+        "classname": "",
+        "teacher": "",
+        "classID": "",
+        "meet": "",
+        "classroom": ""
+      }
+    }
+  }
+}
+
 
 export default function Course() {
 
   const [post, setPost] = React.useState(null);
+
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const [table, setTable] = React.useState(post3.table.day1[1]);
 
   React.useEffect(() => {
     axios.get("http://aaaa.zapto.org/cloud/database/read",
@@ -18,16 +58,15 @@ export default function Course() {
         },
       }
     ).then((response) => {
-      console.log("API Response:" + response.status + " => " + response.statusText)
+      // console.log("API Response:" + response.status + " => " + response.statusText)
       setPost(response.data);
-      // setPost(Read());
     });
   }, []);
 
   if (!post) return setPost(Read());;
-  // console.log(Read())
+
   return (
-    <div className="TablePage_background">
+    <div className="TablePage_background noSelect">
       <br />
       <br />
       <h1 className="title">本學期課表</h1>
@@ -50,83 +89,119 @@ export default function Course() {
             <tr>
               <th >第<br />一<br />節</th>
               <th>08:15<br />｜<br />09:05</th>
-              <td className="pic pe"><p>{post.table.day1[1].classname}</p></td>
-              <td className="pic chinese"><p>{post.table.day2[1].classname}</p></td>
-              <td>{post.table.day3[1].classname}</td>
-              <td>{post.table.day4[1].classname}</td>
-              <td className="pic math"><p>{post.table.day5[1].classname}</p></td>
+              <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[1]) }}><p>{post.table.day1[1].classname}</p></td>
+              <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day2[1]) }}><p>{post.table.day2[1].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day3[1]) }}>{post.table.day3[1].classname}</td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day4[1]) }}>{post.table.day4[1].classname}</td>
+              <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day5[1]) }}><p>{post.table.day5[1].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />二<br />節</th>
               <th>09:15<br />｜<br />10:05</th>
-              <td className="pic pe"><p>{post.table.day1[2].classname}</p></td>
-              <td className="pic basic-electricity-study"><p>{post.table.day2[2].classname}</p></td>
-              <td>{post.table.day3[2].classname}</td>
-              <td>{post.table.day4[2].classname}</td>
-              <td className="pic english"><p>{post.table.day5[2].classname}</p></td>
+              <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[2]) }}><p>{post.table.day1[2].classname}</p></td>
+              <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[2].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day3[2]) }}>{post.table.day3[2].classname}</td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day4[2]) }}>{post.table.day4[2].classname}</td>
+              <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day5[2]) }}><p>{post.table.day5[2].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />三<br />節</th>
               <th >10:15<br />｜<br />11:05</th>
-              <td className="pic basic-electricity"><p>{post.table.day1[3].classname}</p></td>
-              <td className="pic basic-electricity-study"><p>{post.table.day2[3].classname}</p></td>
-              <td>{post.table.day3[3].classname}</td>
-              <td className="pic chinese"><p>{post.table.day4[3].classname}</p></td>
-              <td className="pic instructor"><p>{post.table.day5[3].classname}</p></td>
+              <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day1[3]) }}><p>{post.table.day1[3].classname}</p></td>
+              <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[3].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day3[3]) }}>{post.table.day3[3].classname}</td>
+              <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day4[3]) }}><p>{post.table.day4[3].classname}</p></td>
+              <td className="pic instructor" onClick={() => { setModalShow(true); setTable(post.table.day5[3]) }}><p>{post.table.day5[3].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />四<br />節</th>
               <th >11:15<br />｜<br />12:05</th>
-              <td className="pic math"><p>{post.table.day1[4].classname}</p></td>
-              <td className="pic basic-electricity-study"><p>{post.table.day2[4].classname}</p></td>
-              <td className="pic english"><p>{post.table.day3[4].classname}</p></td>
-              <td>{post.table.day4[4].classname}</td>
-              <td>{post.table.day5[4].classname}</td>
+              <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day1[4]) }}><p>{post.table.day1[4].classname}</p></td>
+              <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[4].classname}</p></td>
+              <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day3[4]) }}><p>{post.table.day3[4].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day4[4]) }}>{post.table.day4[4].classname}</td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day5[4]) }}>{post.table.day5[4].classname}</td>
             </tr>
             <tr>
               <th >第<br />五<br />節</th>
               <th>13:20<br />｜<br />14:10</th>
-              <td className="pic music"><p>{post.table.day1[5].classname}</p></td>
-              <td className="pic math"><p>{post.table.day2[5].classname}</p></td>
-              <td>{post.table.day3[5].classname}</td>
-              <td className="pic math"><p>{post.table.day4[5].classname}</p></td>
-              <td className="pic chinese"><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
+              <td className="pic music" onClick={() => { setModalShow(true); setTable(post.table.day1[5]) }}><p>{post.table.day1[5].classname}</p></td>
+              <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day2[5]) }}><p>{post.table.day2[5].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day3[5]) }}>{post.table.day3[5].classname}</td>
+              <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day4[5]) }}><p>{post.table.day4[5].classname}</p></td>
+              <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post3.table[1]) }}><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
             </tr>
             <tr>
               <th >第<br />六<br />節</th>
               <th>14:20<br />｜<br />15:10</th>
-              <td className="basic-electronics-study"><p>{post.table.day1[6].classname}</p></td>
-              <td>{post.table.day2[6].classname}</td>
-              <td className="pic basic-electricity"><p>{post.table.day3[6].classname}</p></td>
-              <td className="pic english"><p>{post.table.day4[6].classname}</p></td>
-              <td className="pic chinese"><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
+              <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[6].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day2[6]) }}>{post.table.day2[6].classname}</td>
+              <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day3[6]) }}><p>{post.table.day3[6].classname}</p></td>
+              <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day4[6]) }}><p>{post.table.day4[6].classname}</p></td>
+              <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post3.table[1]) }}><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
             </tr>
             <tr>
               <th >第<br />七<br />節</th>
               <th>15:20<br />｜<br />16:10</th>
-              <td className="basic-electronics-study"><p>{post.table.day1[7].classname}</p></td>
-              <td>{post.table.day2[7].classname}</td>
-              <td className="pic basic-electricity"><p>{post.table.day3[7].classname}</p></td>
-              <td className="pic leader"><p>{post.table.day4[7].classname}</p></td>
-              <td className="pic leader"><p>{post.table.day5[7].classname}</p></td>
+              <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[7].classname}</p></td>
+              <td onClick={() => { setModalShow(true); setTable(post.table.day2[7]) }}>{post.table.day2[7].classname}</td>
+              <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day3[7]) }}><p>{post.table.day3[7].classname}</p></td>
+              <td className="pic leader" onClick={() => { setModalShow(true); setTable(post.table.day4[7]) }}><p>{post.table.day4[7].classname}</p></td>
+              <td className="pic leader" onClick={() => { setModalShow(true); setTable(post.table.day5[7]) }}><p>{post.table.day5[7].classname}</p></td>
             </tr>
             <tr>
               <th >第<br />八<br />節</th>
               <th>16:20<br />｜<br />17:10</th>
-              <td className="basic-electronics-study"><p>{post.table.day1[8].classname}</p></td>
-              <td className="pic english"><p>{post.table.day2[8].classname}</p></td>
-              <td className="pic chinese"><p>{post.table.day3[8].classname}</p></td>
-              <td className="pic leader"><p>{post.table.day4[8].classname}</p></td>
-              <td className="pic esl"><p>英語會話A(輔)</p><br /><a>英語會話B(輔)</a></td>
+              <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[8].classname}</p></td>
+              <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day2[8]) }}><p>{post.table.day2[8].classname}</p></td>
+              <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day3[8]) }}><p>{post.table.day3[8].classname}</p></td>
+              <td className="pic leader" onClick={() => { setModalShow(true); setTable(post.table.day4[8]) }}><p>{post.table.day4[8].classname}</p></td>
+              <td className="pic esl" onClick={() => { setModalShow(true); setTable(post.table.day5[8]) }}><p>英語會話A(輔)</p><br /><p>英語會話B(輔)</p></td>
             </tr>
           </tbody>
         </table>
       </div>
       <br />
       <br />
+      <Show
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </div>
   )
+
+  function Show(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        className="modal-control"
+        centered
+      >
+        <Modal.Header className="modal-dark noSelect">
+          <Modal.Title id="contained-modal-title-vcenter" className="modal-title">
+            課程資訊 - {table.classname}
+          </Modal.Title>
+          <CloseButton variant="white" aria-label="Hide" onClick={props.onHide} />
+        </Modal.Header>
+        <Modal.Body className="modal-dark">
+          <p className="modal-body-title noSelect">MEET連結:</p>
+          <p className="modal-body-meet-link">{table.meet}{/*<i className="copy" onclick={ navigator.clipboard.writeText(table.meet) }><Icon.Clipboard /></i>*/}</p>
+          <br />
+          <p className="modal-body-title noSelect">GC課程代碼:</p>
+          <p className="modal-body-gc-code">{table.classroom}</p>
+          <br />
+        </Modal.Body>
+        <Modal.Footer className="modal-dark noSelect">
+          <Button variant="false" onClick={props.onHide} className="modal-button"><p className="modal-button-text">關閉</p></Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
 }
+
+
 
 function Read() {
   const post2 = {

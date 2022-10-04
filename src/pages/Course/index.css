@@ -1,3 +1,10 @@
+.noSelect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 .table-wrap {
     width: 80%;
     margin-left: 10%;
@@ -48,7 +55,8 @@ td {
     vertical-align: middle;
     border: 1px solid white;
     border-collapse: collapse;
-    height: 200px
+    height: 200px;
+    cursor: pointer;
 }
 
 .week-title {
@@ -77,7 +85,7 @@ td.chinese::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -101,7 +109,7 @@ td.math::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -126,7 +134,7 @@ td.english::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -150,7 +158,7 @@ td.instructor::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -174,7 +182,7 @@ td.pe::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -199,7 +207,7 @@ td.basic-electricity::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -223,7 +231,7 @@ td.basic-electricity-study::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -247,7 +255,7 @@ td.basic-electronics-study::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -271,7 +279,7 @@ td.music::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -295,7 +303,7 @@ td.leader::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
@@ -319,12 +327,12 @@ td.esl::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: 0%; 
+    left: 0%;
     width: 100%;
     height: 100%;
     opacity: 0.2;
     z-index: -1;
-    background-size: cover ;
+    background-size: cover;
     background-image: url('../../../public/teachers/ESL.png');
 }
 
@@ -338,7 +346,53 @@ td.esl:hover::before {
     td.pic::before {
         background-image: none;
     }
+
     .info {
-        display:none
+        display: none
     }
+}
+
+.modal-body-title {
+    color: #96989D;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.modal-body-meet-link {
+    padding-top: 10px;
+    color: #fff !important;
+    text-align: left !important;
+    text-decoration: none;
+    background-color: #202225;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.modal-body-gc-code {
+    padding-top: 10px;
+    color: #fff !important;
+    text-align: left !important;
+    text-decoration: none;
+    background-color: #202225;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.close {
+    color: #fff !important;
+    opacity: 1;
+}
+
+i.copy {
+    padding-left: 90px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #fff;
+}
+i.copy:hover {
+    cursor: pointer;
 }

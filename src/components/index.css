@@ -18,9 +18,6 @@ body {
     -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 }
 
-table,
-thead,
-thead,
 th,
 td,
 tr {
@@ -30,4 +27,48 @@ tr {
 
 p {
     margin-bottom: 0rem;
+}
+
+.modal-lg {
+    width: 450px;
+}
+
+.modal-dark {
+    background-color: #36393f;
+    border: 1px solid#36393f;
+}
+
+.modal-dark.closeButton {
+    color: #fff !important
+}
+
+.modal-footer {
+    background-color: #2f3136;
+}
+
+.modal-button {
+    width: 96px;
+    background-color: #5865f2 !important;
+    border: 1px solid #5865f2;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.modal-button:hover {
+    background-color: rgba(88, 101, 242, 0.9) !important;
+    border: 1px solid #5865f2;
+}
+
+.modal-header {
+    color: white;
+}
+
+.close {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.modal-control {
+    animation: fadeIn 5s;
+    animation: fadeOut 5s;
 }
