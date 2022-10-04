@@ -230,10 +230,34 @@ td.basic-electricity-study::before {
     z-index: -1;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url('../../../public/teachers/Basic_Electricity_Study.png');
+    background-image: url('../../../public/teachers/Basic_Electricity_Study1.png');
 }
 
 td.basic-electricity-study:hover::before {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+td.basic-electronics-study {
+    position: relative;
+    z-index: 1;
+}
+
+td.basic-electronics-study::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%; 
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../../public/teachers/Basic_Electronics_Study.png');
+}
+
+td.basic-electronics-study:hover::before {
     opacity: 0.7;
     transition: 0.5s;
 }
