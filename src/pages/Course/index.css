@@ -242,7 +242,7 @@ td.music>p::before {
     background-image: url('../../../public/teachers/Music.png');
 }
 
-td.leader>p:hover::before {
+td.music>p:hover::before {
     opacity: 0.6;
 }
 
