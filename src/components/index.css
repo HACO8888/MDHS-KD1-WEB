@@ -72,3 +72,43 @@ p {
     animation: fadeIn 5s;
     animation: fadeOut 5s;
 }
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    td.pic::before {
+        background-image: none;
+    }
+
+    .info {
+        display: none
+    }
+
+    .modal-lg {
+        width: 100%;
+    }
+
+    .modal-body-meet-link {
+        padding-top: 10px;
+        color: #fff !important;
+        text-align: left !important;
+        text-decoration: none;
+        background-color: #202225;
+        border-radius: 3px;
+        height: 40px;
+        padding: 10px;
+        vertical-align: middle;
+    }
+    
+    .modal-body-gc-code {
+        padding-top: 10px;
+        color: #fff !important;
+        text-align: left !important;
+        text-decoration: none;
+        background-color: #202225;
+        border-radius: 3px;
+        height: 40px;
+        padding: 10px;
+        vertical-align: middle;
+
+    }
+}
