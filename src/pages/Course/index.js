@@ -91,7 +91,7 @@ export default function Course() {
               <th>08:15<br />｜<br />09:05</th>
               <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[1]) }}><p>{post.table.day1[1].classname}</p></td>
               <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day2[1]) }}><p>{post.table.day2[1].classname}</p></td>
-              <td onClick={() => { setModalShow(true); setTable(post.table.day3[1]) }}>{post.table.day3[1].classname}</td>
+              <td className="pic computer-graphics" onClick={() => { setModalShow(true); setTable(post.table.day3[1]) }}><p>{post.table.day3[1].classname}</p></td>
               <td onClick={() => { setModalShow(true); setTable(post.table.day4[1]) }}>{post.table.day4[1].classname}</td>
               <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day5[1]) }}><p>{post.table.day5[1].classname}</p></td>
             </tr>
@@ -100,7 +100,7 @@ export default function Course() {
               <th>09:15<br />｜<br />10:05</th>
               <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[2]) }}><p>{post.table.day1[2].classname}</p></td>
               <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[2].classname}</p></td>
-              <td onClick={() => { setModalShow(true); setTable(post.table.day3[2]) }}>{post.table.day3[2].classname}</td>
+              <td className="pic computer-graphics" onClick={() => { setModalShow(true); setTable(post.table.day3[2]) }}><p>{post.table.day3[2].classname}</p></td>
               <td onClick={() => { setModalShow(true); setTable(post.table.day4[2]) }}>{post.table.day4[2].classname}</td>
               <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day5[2]) }}><p>{post.table.day5[2].classname}</p></td>
             </tr>
