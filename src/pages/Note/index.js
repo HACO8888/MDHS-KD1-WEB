@@ -1,6 +1,6 @@
-import './index.css'
+import './index.css';
 
-const Note = () => {
+export default function Note() {
     return (
         <div>
             <br />
@@ -9,5 +9,3 @@ const Note = () => {
         </div>
     )
 }
-
-export default Note
