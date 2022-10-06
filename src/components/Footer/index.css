@@ -13,7 +13,7 @@ a {
 }
 .item1:hover {
     text-decoration: none;
-    color: #48976a;
+    color: #fff;/*48976a*/
 }
 .item1:focus {
     outline: 0;

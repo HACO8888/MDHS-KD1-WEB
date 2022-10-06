@@ -1,6 +1,5 @@
 import React from "react";
 import './index.css';
-import PrivacyModal from "../ModalView/PrivacyModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +9,7 @@ function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <div className="item1">
-                    <PrivacyModal />
+                    沒有隱私權政策
                 </div>
 
                 <div className="item2">
@@ -42,8 +41,6 @@ function Footer() {
                 >
                     <FontAwesomeIcon icon={faDiscord} />
                 </a>
-
-                {false && <PrivacyModal click={true} />}
             </div>
         </footer>
     )
