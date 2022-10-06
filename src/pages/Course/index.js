@@ -92,7 +92,7 @@ export default function Course() {
               <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[1]) }}><p>{post.table.day1[1].classname}</p></td>
               <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day2[1]) }}><p>{post.table.day2[1].classname}</p></td>
               <td className="pic computer-graphics" onClick={() => { setModalShow(true); setTable(post.table.day3[1]) }}><p>{post.table.day3[1].classname}</p></td>
-              <td onClick={() => { setModalShow(true); setTable(post.table.day4[1]) }}>{post.table.day4[1].classname}</td>
+              <td className="pic history" onClick={() => { setModalShow(true); setTable(post.table.day4[1]) }}><p>{post.table.day4[1].classname}</p></td>
               <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day5[1]) }}><p>{post.table.day5[1].classname}</p></td>
             </tr>
             <tr>
@@ -119,7 +119,7 @@ export default function Course() {
               <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day1[4]) }}><p>{post.table.day1[4].classname}</p></td>
               <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[4].classname}</p></td>
               <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day3[4]) }}><p>{post.table.day3[4].classname}</p></td>
-              <td onClick={() => { setModalShow(true); setTable(post.table.day4[4]) }}>{post.table.day4[4].classname}</td>
+              <td className="pic help" onClick={() => { setModalShow(true); setTable(post.table.day4[4]) }}><p>{post.table.day4[4].classname}</p></td>
               <td onClick={() => { setModalShow(true); setTable(post.table.day5[4]) }}>{post.table.day5[4].classname}</td>
             </tr>
             <tr>
@@ -135,7 +135,7 @@ export default function Course() {
               <th >第<br />六<br />節</th>
               <th>14:20<br />｜<br />15:10</th>
               <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[6].classname}</p></td>
-              <td onClick={() => { setModalShow(true); setTable(post.table.day2[6]) }}>{post.table.day2[6].classname}</td>
+              <td className="pic history" onClick={() => { setModalShow(true); setTable(post.table.day2[6]) }}><p>{post.table.day2[6].classname}</p></td>
               <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day3[6]) }}><p>{post.table.day3[6].classname}</p></td>
               <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day4[6]) }}><p>{post.table.day4[6].classname}</p></td>
               <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post3.table[1]) }}><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
