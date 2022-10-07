@@ -9,7 +9,7 @@ function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <div className="item1">
-                    沒有隱私權政策
+                    隱私權政策
                 </div>
 
                 <div className="item2">
