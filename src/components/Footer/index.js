@@ -13,7 +13,7 @@ function Footer() {
                 </div>
 
                 <div className="item2">
-                    <span style={{ paddingRight: 5 }}>Copyright </span>
+                    <span style={{ paddingRight: 2 }}>Copyright </span>
                     <FontAwesomeIcon icon={faCopyright} />{" "}
                     <span style={{ paddingLeft: 2 }}>
                         {new Date().getFullYear()} MDHS K1D1. All Rights
