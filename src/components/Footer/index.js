@@ -9,7 +9,7 @@ function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <div className="item1">
-                    隱私權政策
+                    <br />
                 </div>
 
                 <div className="item2">
@@ -25,14 +25,14 @@ function Footer() {
                     <FontAwesomeIcon icon={faGithub} />
                 </a>
                 <a
-                    href="http://fb.com/sudiptob2"
+                    href="https://www.instagram.com/mdhs_k1d1/"
                     target="_blank"
                     className="item4"
                 >
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
-                    href="https://www.youtube.com/"
+                    href="https://discord.gg/q6XwvtXcxV"
                     target="_blank"
                     className="item5"
                 >

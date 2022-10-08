@@ -23,9 +23,9 @@ function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">首頁</Nav.Link>
-                        <Nav.Link href="/course">班級課表 <Badge bg="danger">NEW</Badge></Nav.Link>
-                        <Nav.Link href="/people">人物去世 <Badge bg="primary">Beta</Badge></Nav.Link>
-                        <Nav.Link href="/note">班級記事 <Badge bg="secondary">DEV</Badge></Nav.Link>
+                        <Nav.Link href="/course">班級課表 <Badge bg="danger">New</Badge></Nav.Link>
+                        <Nav.Link href="/people">人物趣事 <Badge bg="primary">Beta</Badge></Nav.Link>
+                        <Nav.Link href="/note">班級記事 <Badge bg="secondary">Dev</Badge></Nav.Link>
                         <Nav.Link href="/test">測試頁面</Nav.Link>
                     </Nav>
                     <Nav className="d-flex">

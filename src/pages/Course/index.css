@@ -410,6 +410,52 @@ td.help:hover::before {
     transition: 0.5s;
 }
 
+td.health {
+    position: relative;
+    z-index: 1;
+}
+
+td.health::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Health.png');
+}
+
+td.health:hover::before {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+td.art {
+    position: relative;
+    z-index: 1;
+}
+
+td.art::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    background-size: cover;
+    background-image: url('../../../public/teachers/Art.png');
+}
+
+td.art:hover::before {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
 .modal-body-title {
     color: #96989D;
     text-align: left;
