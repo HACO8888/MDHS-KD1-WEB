@@ -48,18 +48,6 @@
     ]
   },
   "description": "一個專屬於明道中學訊一1的網站，怎麼樣羨慕吧！",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MRHACO/MDHS-K1D1-WEB.git"
-  },
-  "keywords": [],
-  "author": "HACO",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MRHACO/MDHS-K1D1-WEB/issues"
-  },
-  "homepage": "https://github.com/MRHACO/MDHS-K1D1-WEB#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.17",

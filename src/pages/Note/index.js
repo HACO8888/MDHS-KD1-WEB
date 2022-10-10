@@ -1,7 +1,7 @@
 import './index.css';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import CloseButton from 'react-bootstrap/CloseButton';
 import Alert from 'react-bootstrap/Alert';
@@ -20,7 +20,9 @@ export default function Note() {
     }
 
     return (
-        <div>
+        <div>            <h1 className="text-3xl font-bold underline">
+                Hello world!
+            </h1>
 
             <br />
             <h1 className='title1'>班級記事</h1>
