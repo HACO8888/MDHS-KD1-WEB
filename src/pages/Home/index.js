@@ -1,6 +1,6 @@
 import './index.css'
 import 'react-slideshow-image/dist/styles.css'
-import Badge from 'react-bootstrap/Badge';
+// import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 
 const Home = () => {
