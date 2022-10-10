@@ -57,14 +57,6 @@ export default function People() {
                         </Row>
                     </Container>
                 </Tab>
-                <Tab eventKey="" title="尚未開發" disabled>
-                    <Container>
-                        <Row>
-                            <Col sm={5}><img src="" className='people-photo' /></Col>
-                            <Col sm={5}><p className='people-info'></p></Col>
-                        </Row>
-                    </Container>
-                </Tab>
             </Tabs>
             <br />
             <br />
