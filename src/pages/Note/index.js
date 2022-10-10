@@ -20,10 +20,7 @@ export default function Note() {
     }
 
     return (
-        <div>            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
-
+        <div>
             <br />
             <h1 className='title1'>班級記事</h1>
             <br />
