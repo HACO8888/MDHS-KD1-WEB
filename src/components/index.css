@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.noSelect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -163,7 +170,7 @@ p {
 
 .form-select {
     height: 40px;
-    font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     display: block;
     width: 100%;
@@ -180,15 +187,15 @@ p {
     background-size: 16px 12px;
     border: 1px solid #202225;
     border-radius: 3px;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    appearance:none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    appearance: none;
     vertical-align: middle;
     padding: 10px;
 }
 
 .form-select:disabled {
     height: 40px;
-    font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center !important;
     display: block;
     width: 100%;
@@ -205,13 +212,13 @@ p {
     background-size: 16px 12px;
     border: 1px solid #202225;
     border-radius: 3px;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    appearance:none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    appearance: none;
     padding: 10px;
 }
 
 .form-control {
-    height:40px;
+    height: 40px;
     display: block;
     width: 100%;
     padding: .375rem .75rem;
@@ -224,12 +231,12 @@ p {
     border: 1px solid #202225;
     appearance: none;
     border-radius: 3px;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     resize: none;
 }
 
 .form-control:focus {
-    height:40px;
+    height: 40px;
     display: block;
     width: 100%;
     padding: .375rem .75rem;
@@ -242,7 +249,7 @@ p {
     border: 1px solid #202225;
     /* appearance: none; */
     border-radius: 3px;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     resize: none;
 }
 
@@ -251,17 +258,20 @@ p {
     opacity: 1;
 }
 
-.cancle-button, .modal-cancle-button-text {
-    text-decoration:underline;
+.cancle-button,
+.modal-cancle-button-text {
+    text-decoration: underline;
 }
 
-.cancle-button:focus, .modal-cancle-button-text:focus {
-    text-decoration:underline;
+.cancle-button:focus,
+.modal-cancle-button-text:focus {
+    text-decoration: underline;
     border: none;
 }
 
-.cancle-button:hover, .modal-cancle-button-text:hover {
-    text-decoration:underline;
+.cancle-button:hover,
+.modal-cancle-button-text:hover {
+    text-decoration: underline;
     border: none;
 }
 

@@ -16,7 +16,7 @@ function NavBar() {
         <>
             <nav className="bg-gray-800 px-4 py-3">
                 <div className="flex justify-between item-center">
-                    <a href="/" className="flex items-center flex-shrink-0 text-white mr-6">
+                    <a href="/" className="flex items-center flex-shrink-0 text-white mr-6 noSelect">
                         {/* <img width="50PX" src='/logo.png' alt="logo" /> */}
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-robot h-8 w-8 mr-2" width="50" height="50" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -30,7 +30,7 @@ function NavBar() {
                         <span className="font-semibold text-xl tracking-tight">MDHS K1D1</span>
                     </a>
                     <div className="hidden md:flex gap-2">
-                        <a href="/" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5">{ /* bg-gray-900 text-white px-5 py-3 rounded-md */}
+                        <a href="/" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">{ /* bg-gray-900 text-white px-5 py-3 rounded-md */}
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
@@ -39,7 +39,7 @@ function NavBar() {
                             </svg>
                             首頁
                         </a>
-                        <a href="/course" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5">
+                        <a href="/course" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <rect x="4" y="5" width="16" height="16" rx="2"></rect>
@@ -50,7 +50,7 @@ function NavBar() {
                             </svg>
                             班級課表
                         </a>
-                        <a href="/people" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5">
+                        <a href="/people" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -58,7 +58,7 @@ function NavBar() {
                             </svg>
                             人物趣事
                         </a>
-                        <a href="/note" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5">
+                        <a href="/note" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-notes" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <rect x="5" y="3" width="14" height="18" rx="2"></rect>
@@ -68,7 +68,7 @@ function NavBar() {
                             </svg>
                             班級記事
                         </a>
-                        <a href="/test" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5">
+                        <a href="/test" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <polyline points="7 8 3 12 7 16"></polyline>
@@ -109,14 +109,14 @@ function NavBar() {
                                 <line x1="4" y1="18" x2="20" y2="18"></line>
                             </svg>
                         </button>
-                        <a className="block bg-blue-600 text-gray-200 px-4 py-3 rounded-md hover:bg-blue-600/80 hover:text-gray-200" onClick={login}>
+                        <a className="block bg-blue-600 text-gray-200 px-4 py-3 rounded-md hover:bg-blue-600/80 hover:text-gray-200 noSelect" onClick={login}>
                             登入
                         </a>
                     </div>
                 </div>
                 <div className={(navbarOpen ? "" : " hidden")}>
                     <div className="flex flex-col gap-1 py-3">
-                        <a href="/" className="text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex md:py-1">
+                        <a href="/" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex md:py-1">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
@@ -125,7 +125,7 @@ function NavBar() {
                             </svg>
                             首頁
                         </a>
-                        <a href="/course" className="text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
+                        <a href="/course" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <rect x="4" y="5" width="16" height="16" rx="2"></rect>
@@ -136,7 +136,7 @@ function NavBar() {
                             </svg>
                             班級課表
                         </a>
-                        <a href="/people" className="text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
+                        <a href="/people" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -144,7 +144,7 @@ function NavBar() {
                             </svg>
                             人物趣事
                         </a>
-                        <a href="/note" className="text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
+                        <a href="/note" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-notes" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <rect x="5" y="3" width="14" height="18" rx="2"></rect>
@@ -154,7 +154,7 @@ function NavBar() {
                             </svg>
                             班級記事
                         </a>
-                        <a href="/test" className="text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
+                        <a href="/test" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <polyline points="7 8 3 12 7 16"></polyline>
