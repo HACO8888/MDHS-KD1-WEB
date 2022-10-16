@@ -6,10 +6,6 @@ import './index.css';
 // import Container from 'react-bootstrap/Container';
 // import Navbar from 'react-bootstrap/Navbar';
 
-function login() {
-    alert("功能開發中尚不可使用")
-}
-
 function NavBar() {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     const [loginModal, setLoginModal] = React.useState(false);
