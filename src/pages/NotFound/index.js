@@ -3,7 +3,7 @@ import './index.css'
 
 function NotFound() {
     return (
-        <div>
+        <div className="select-none">
             <div>
                 <div className="starsec"></div>
                 <div className="starthird"></div>
@@ -28,7 +28,7 @@ function NotFound() {
                         <h1 className="message__title">404 不存在的頁面</h1>
                         <p className="message__text">很遺憾你跑到了不存在的頁面<br />希望這盞在飄來飄去的燈給已帶給你一絲絲的溫暖</p>
                         <div className="error__nav e-nav">
-                        <a href="/" target="_blanck" className="e-nav__link"></a>
+                        <a href="/" className="e-nav__link"></a>
                     </div>
                     </div>
                 </div>

@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .noSelect {
     user-select: none;
@@ -10,7 +7,7 @@
 }
 
 body {
-    margin: 0;
+    /* margin: 0; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -45,16 +42,16 @@ body {
     -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 }
 
-th,
+/* th,
 td,
 tr {
     border: 1px solid white;
     border-collapse: collapse;
-}
+} */
 
-p {
+/* p {
     margin-bottom: 0rem;
-}
+} */
 
 .modal-lg {
     width: 450px;
@@ -280,33 +277,29 @@ p {
     opacity: 1;
 }
 
-
-.privacy {
-    background-color: #36393f;
-}
-
 .paddingtop {
     padding-top: 15px;
 }
 
+/* IMPORTANT THIS CAN FIX FOOTER BUG START*/
+
 #root {
-    /* Taking the full height of the body. No scroll */
     position: relative;
     min-height: 100vh;
 }
 
 .content-wrap {
-    /* Leave space for the footer. Important */
     padding-bottom: 4rem;
 }
 
 .footer {
-    /* Fixing the footer at the bottom  */
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 4rem;
 }
+
+/* IMPORTANT THIS CAN FIX FOOTER BUG END*/
 
 .btn.disabled,
 .btn:disabled,

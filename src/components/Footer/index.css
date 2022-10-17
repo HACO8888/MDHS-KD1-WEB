@@ -1,10 +1,10 @@
-a {
+/* a {
     color: inherit;
 }
 .item1 {
     border: none;
     background-color: inherit;
-    color: #fff;/*6bd1f0*/
+    color: #fff;
     padding-left: 10px;
     font-size: 20px;
     display: flex;
@@ -13,7 +13,7 @@ a {
 }
 .item1:hover {
     text-decoration: none;
-    color: #fff;/*48976a*/
+    color: #fff;
 }
 .item1:focus {
     outline: 0;
@@ -73,7 +73,6 @@ a {
     grid-template-columns: 3fr 6fr 1fr 1fr 1fr;
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .item1 {
         font-size: 12px;
@@ -89,7 +88,6 @@ a {
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .item1 {
         font-size: 14px;
@@ -105,7 +103,6 @@ a {
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .item1 {
         font-size: 16px;
@@ -120,8 +117,6 @@ a {
         font-size: 16px;
     }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .item1 {
         font-size: 18px;
@@ -137,7 +132,6 @@ a {
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .item1 {
         font-size: 20px;
@@ -151,4 +145,4 @@ a {
     .item5 {
         font-size: 20px;
     }
-}
+} */

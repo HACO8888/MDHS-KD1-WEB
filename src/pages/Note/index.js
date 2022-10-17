@@ -20,9 +20,9 @@ export default function Note() {
     }
 
     return (
-        <div>
+        <div className="select-none">
             <br />
-            <h1 className='title1'>班級記事</h1>
+            <h1 className='text-5xl'>班級記事</h1>
             <br />
             <Button variant="primary" onClick={handleShow}>
                 新增共享筆記
