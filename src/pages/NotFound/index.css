@@ -9,7 +9,7 @@
     padding: 0;
     -webkit-text-size-adjust: none;
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 html,
@@ -214,7 +214,7 @@ button {
     max-width: 600px;
     margin: 40px auto 0;
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .e-nav__form {
