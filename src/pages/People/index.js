@@ -19,9 +19,9 @@ export default function People() {
                     <div className='container'>
                         <div className='md:flex'>
                             <div className='flex-1'>
-                                <img src="/pictures/潘彥均.jpg" alt='37' className='w-[90%] ml-[5%]' />
+                                <img src="/pictures/潘彥均.jpg" alt='37' className='w-[80%] ml-[10%]' />
                             </div>
-                            <div className='flex-1 w-[90%] text-center ml-[5%]'>
+                            <div className='flex-1 w-[100%] text-center ml-[auto]'>
                                 <br />
                                 <h1 className='text-3xl md:text-5xl text-center'>37 潘彥均 日常追思文</h1>
                                 <p className='text-white text-2xl text-center align-middle'>
