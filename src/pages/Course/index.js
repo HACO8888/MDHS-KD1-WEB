@@ -1,42 +1,6 @@
 // import axios from "axios";
 import React from "react"
 import './index.css';
-// import Button from 'react-bootstrap/Button';
-// import Modal from 'react-bootstrap/Modal';
-// import CloseButton from 'react-bootstrap/CloseButton';
-// import * as Icon from 'react-bootstrap-icons';
-
-// const post3 =
-// {
-//   "table": {
-//     "1": {
-//       "classname": "國語文",
-//       "teacher": "陳聯華",
-//       "classID": "1945528",
-//       "meet": "https://meet.google.com/jhn-oghj-vqn",
-//       "classroom": "lsbr6d2"
-//     },
-//     "2": {
-//       "classname": "基本電學實習",
-//       "meet": "https://meet.google.com/opn-ubpu-faj、vtp-xurj-cgh",
-//       "classroom": "64znh35 (柯尚仁)、5v4an56 (尤振輝)"
-//     },
-//     "3": {
-//       "classname": "基礎電子實習",
-//       "meet": "https://meet.google.com/awr-ddyu-cgd、obr-jvhx-owr",
-//       "classroom": "hrn5wf5 (林順進)、n5sz7dd (黃凱威)"
-//     },
-//     "day1": {
-//       "1": {
-//         "classname": "",
-//         "teacher": "",
-//         "classID": "",
-//         "meet": "",
-//         "classroom": ""
-//       }
-//     }
-//   }
-// }
 
 
 export default function Course() {
@@ -45,7 +9,14 @@ export default function Course() {
 
   const [modalShow, setModalShow] = React.useState(false);
 
-  // const [table, setTable] = React.useState(post3.table.day1[1]);
+  const [table, setTable] = React.useState(
+    {
+      "classname": "X",
+      "teacher": "X",
+      "classroom": "X",
+      "meet": "X"
+    }
+  );
 
   // React.useEffect(() => {
   //   axios.get("http://aaaa.zapto.org/cloud/database/read",
@@ -63,7 +34,7 @@ export default function Course() {
   //   });
   // }, []);
 
-  if (!post) return setPost(Read());;
+  if (!post) return setPost(Read());
 
   return (
     <>
@@ -110,152 +81,152 @@ export default function Course() {
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第一節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">08:15<br />｜<br />09:05</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>
                 <p className="text-base">{post.table.day1[1].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[1]) }}>
                 <p className="text-base">{post.table.day2[1].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[1]) }}>
                 <p className="text-base">{post.table.day3[1].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[1]) }}>
                 <p className="text-base">{post.table.day4[1].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[1]) }}>
                 <p className="text-base">{post.table.day5[1].classname}</p>
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第二節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">09:15<br />｜<br />10:05</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[2]) }}>
                 <p className="text-base">{post.table.day1[2].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[2]) }}>
                 <p className="text-base">{post.table.day2[2].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[2]) }}>
                 <p className="text-base">{post.table.day3[2].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[2]) }}>
                 <p className="text-base">{post.table.day4[2].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[2]) }}>
                 <p className="text-base">{post.table.day5[2].classname}</p>
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第三節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">10:15<br />｜<br />11:05</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[3]) }}>
                 <p className="text-base">{post.table.day1[3].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[3]) }}>
                 <p className="text-base">{post.table.day2[3].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[3]) }}>
                 <p className="text-base">{post.table.day3[3].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day7[3]) }}>
                 <p className="text-base">{post.table.day4[3].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[3]) }}>
                 <p className="text-base">{post.table.day5[3].classname}</p>
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第四節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">11:15<br />｜<br />12:05</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[4]) }}>
                 <p className="text-base">{post.table.day1[4].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[4]) }}>
                 <p className="text-base">{post.table.day2[4].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[4]) }}>
                 <p className="text-base">{post.table.day3[4].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[4]) }}>
                 <p className="text-base">{post.table.day4[4].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[4]) }}>
                 <p className="text-base">{post.table.day5[4].classname}</p>
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第五節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">13:20<br />｜<br />14:10</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[5]) }}>
                 <p className="text-base">{post.table.day1[5].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[5]) }}>
                 <p className="text-base">{post.table.day2[5].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[5]) }}>
                 <p className="text-base">{post.table.day3[5].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[5]) }}>
                 <p className="text-base">{post.table.day4[5].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]">
                 <p className="text-base">X</p>{ /* {post.table.day5[5].classname} */}
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第六節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">14:20<br />｜<br />15:10</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[6]) }}>
                 <p className="text-base">{post.table.day1[6].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[6]) }}>
                 <p className="text-base">{post.table.day2[6].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[6]) }}>
                 <p className="text-base">{post.table.day3[6].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[6]) }}>
                 <p className="text-base">{post.table.day4[6].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]">
                 <p className="text-base">X</p> { /* {post.table.day5[6].classname} */}
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第七節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">15:20<br />｜<br />16:10</th>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]">
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[7]) }}>
                 <p className="text-base">{post.table.day1[7].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[7]) }}>
                 <p className="text-base">{post.table.day2[7].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[7]) }}>
                 <p className="text-base">{post.table.day3[7].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[7]) }}>
                 <p className="text-base">{post.table.day4[7].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[7]) }}>
                 <p className="text-base">{post.table.day5[7].classname}</p>
               </td>
             </tr>
             <tr className="bg-gray-600 border-gray-500">
               <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r align-middle w-[5%] text-base">第八節</th>
               <th scope="row" className="py-4 px-6 border-white border-r align-middle w-[5%]">16:20<br />｜<br />17:10</th>
-              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[8]) }}>
                 <p className="text-base">{post.table.day1[8].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[8]) }}>
                 <p className="text-base">{post.table.day2[8].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[8]) }}>
                 <p className="text-base">{post.table.day3[8].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[8]) }}>
                 <p className="text-base">{post.table.day4[8].classname}</p>
               </td>
-              <td className="py-4 px-6 border-white align-middle w-[18%]" onClick={() => setModalShow(!modalShow)}>
+              <td className="py-4 px-6 border-white align-middle w-[18%]">
                 <p className="text-base">X</p>{ /* {post.table.day5[8].classname} */}
               </td>
             </tr>
@@ -265,167 +236,35 @@ export default function Course() {
       <br />
       <br />
       <div id="medium-modal" tabIndex="-1" className={"overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full align-middle" + (modalShow ? "" : " hidden")}>
-        <div className="relative p-4 w-full m-[auto] mt-[160px] max-w-lg h-full md:h-auto align-middle">
+        <div className="relative p-4 w-full m-[auto] mt-[90px] max-w-lg h-full md:h-auto align-middle">
           <div className="relative rounded-lg shadow-2xl bg-slate-900">
             <div className="flex justify-between items-center p-5 rounded-t border-b border-gray-600 select-none">
               <h3 className="text-xl font-medium text-white">
-                課程資訊 – class.name
+                課程資訊 – {table.classname}
               </h3>
-              <button type="button" className="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white" data-modal-toggle="medium-modal" onClick={() => setModalShow(!modalShow)}>
+              <button type="button" className="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white" data-modal-toggle="medium-modal" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>
                 <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                <span className="sr-only">Close modal</span>
+                <span className="sr-only">關閉</span>
               </button>
             </div>
             <div className="p-6 space-y-5">
+              <p className="text-left text-xl select-none">任課教師：</p>
+              <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.teacher}</p>
+              <br className="select-none" />
               <p className="text-left text-xl select-none">MEET連結：</p>
-              <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">class.meet</p>
+              <p className="bg-slate-700 h-[40px] align-middle text-[23px] rounded text-left pl-[10px]">{table.meet}</p>
               <br className="select-none" />
               <p className="text-left text-xl select-none">GC課程代碼：</p>
-              <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">class.code</p>
+              <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.classroom}</p>
             </div>
             <div className="p-6 space-x-2 rounded-b border-t border-gray-600 select-none">
-              <button data-modal-toggle="medium-modal" type="button" className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" onClick={() => setModalShow(!modalShow)}>關閉</button>
+              <button data-modal-toggle="medium-modal" type="button" className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>關閉</button>
             </div>
           </div>
         </div>
       </div>
     </>
   )
-
-  // return (
-  //   <div className="TablePage_background noSelect">
-  //     <br />
-  //     <br />
-  //     <h1 className="title">本學期課表</h1>
-  //     <br />
-  //     <p className="info">如圖片有被拉伸的狀況是故意所為</p>
-  //     <br />
-  //     <div className="table-wrap">
-  //       <table className="table">
-  //         <thead className="thead-primary">
-  //           <tr>
-  //             <th colSpan="2" className="half">節數/時間</th>
-  //             <th className="day">星期一</th>
-  //             <th className="day">星期二</th>
-  //             <th className="day">星期三</th>
-  //             <th className="day">星期四</th>
-  //             <th className="day">星期五</th>
-  //           </tr>
-  //         </thead>
-  //         <tbody>
-  //           <tr>
-  //             <th >第<br />一<br />節</th>
-  //             <th>08:15<br />｜<br />09:05</th>
-  //             <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[1]) }}><p>{post.table.day1[1].classname}</p></td>
-  //             <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day2[1]) }}><p>{post.table.day2[1].classname}</p></td>
-  //             <td className="pic computer-graphics" onClick={() => { setModalShow(true); setTable(post.table.day3[1]) }}><p>{post.table.day3[1].classname}</p></td>
-  //             <td className="pic history" onClick={() => { setModalShow(true); setTable(post.table.day4[1]) }}><p>{post.table.day4[1].classname}</p></td>
-  //             <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day5[1]) }}><p>{post.table.day5[1].classname}</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />二<br />節</th>
-  //             <th>09:15<br />｜<br />10:05</th>
-  //             <td className="pic pe" onClick={() => { setModalShow(true); setTable(post.table.day1[2]) }}><p>{post.table.day1[2].classname}</p></td>
-  //             <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[2].classname}</p></td>
-  //             <td className="pic computer-graphics" onClick={() => { setModalShow(true); setTable(post.table.day3[2]) }}><p>{post.table.day3[2].classname}</p></td>
-  //             <td onClick={() => { setModalShow(true); setTable(post.table.day4[2]) }}>{post.table.day4[2].classname}</td>
-  //             <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day5[2]) }}><p>{post.table.day5[2].classname}</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />三<br />節</th>
-  //             <th >10:15<br />｜<br />11:05</th>
-  //             <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day1[3]) }}><p>{post.table.day1[3].classname}</p></td>
-  //             <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[3].classname}</p></td>
-  //             <td onClick={() => { setModalShow(true); setTable(post.table.day3[3]) }}>{post.table.day3[3].classname}</td>
-  //             <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day4[3]) }}><p>{post.table.day4[3].classname}</p></td>
-  //             <td className="pic instructor" onClick={() => { setModalShow(true); setTable(post.table.day5[3]) }}><p>{post.table.day5[3].classname}</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />四<br />節</th>
-  //             <th >11:15<br />｜<br />12:05</th>
-  //             <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day1[4]) }}><p>{post.table.day1[4].classname}</p></td>
-  //             <td className="pic basic-electricity-study" onClick={() => { setModalShow(true); setTable(post3.table[2]) }}><p>{post.table.day2[4].classname}</p></td>
-  //             <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day3[4]) }}><p>{post.table.day3[4].classname}</p></td>
-  //             <td className="pic help" onClick={() => { setModalShow(true); setTable(post.table.day4[4]) }}><p>{post.table.day4[4].classname}</p></td>
-  //             <td className="pic health" onClick={() => { setModalShow(true); setTable(post.table.day5[4]) }}><p>{post.table.day5[4].classname}</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />五<br />節</th>
-  //             <th>13:20<br />｜<br />14:10</th>
-  //             <td className="pic music" onClick={() => { setModalShow(true); setTable(post.table.day1[5]) }}><p>{post.table.day1[5].classname}</p></td>
-  //             <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day2[5]) }}><p>{post.table.day2[5].classname}</p></td>
-  //             <td className="pic art" onClick={() => { setModalShow(true); setTable(post.table.day3[5]) }}><p>{post.table.day3[5].classname}</p></td>
-  //             <td className="pic math" onClick={() => { setModalShow(true); setTable(post.table.day4[5]) }}><p>{post.table.day4[5].classname}</p></td>
-  //             <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post3.table[1]) }}><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />六<br />節</th>
-  //             <th>14:20<br />｜<br />15:10</th>
-  //             <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[6].classname}</p></td>
-  //             <td className="pic history" onClick={() => { setModalShow(true); setTable(post.table.day2[6]) }}><p>{post.table.day2[6].classname}</p></td>
-  //             <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day3[6]) }}><p>{post.table.day3[6].classname}</p></td>
-  //             <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day4[6]) }}><p>{post.table.day4[6].classname}</p></td>
-  //             <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post3.table[1]) }}><p className="week-title">單周</p><p>國語文</p><br /><p className="week-title">雙周</p><p>課內社團</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />七<br />節</th>
-  //             <th>15:20<br />｜<br />16:10</th>
-  //             <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[7].classname}</p></td>
-  //             <td onClick={() => { setModalShow(true); setTable(post.table.day2[7]) }}>{post.table.day2[7].classname}</td>
-  //             <td className="pic basic-electricity" onClick={() => { setModalShow(true); setTable(post.table.day3[7]) }}><p>{post.table.day3[7].classname}</p></td>
-  //             <td className="pic leader" onClick={() => { setModalShow(true); setTable(post.table.day4[7]) }}><p>{post.table.day4[7].classname}</p></td>
-  //             <td className="pic leader" onClick={() => { setModalShow(true); setTable(post.table.day5[7]) }}><p>{post.table.day5[7].classname}</p></td>
-  //           </tr>
-  //           <tr>
-  //             <th >第<br />八<br />節</th>
-  //             <th>16:20<br />｜<br />17:10</th>
-  //             <td className="pic basic-electronics-study" onClick={() => { setModalShow(true); setTable(post3.table[3]) }}><p>{post.table.day1[8].classname}</p></td>
-  //             <td className="pic english" onClick={() => { setModalShow(true); setTable(post.table.day2[8]) }}><p>{post.table.day2[8].classname}</p></td>
-  //             <td className="pic chinese" onClick={() => { setModalShow(true); setTable(post.table.day3[8]) }}><p>{post.table.day3[8].classname}</p></td>
-  //             <td className="pic leader" onClick={() => { setModalShow(true); setTable(post.table.day4[8]) }}><p>{post.table.day4[8].classname}</p></td>
-  //             <td className="pic esl" onClick={() => { setModalShow(true); setTable(post.table.day5[8]) }}><p>英語會話A(輔)</p><br /><p>英語會話B(輔)</p></td>
-  //           </tr>
-  //         </tbody>
-  //       </table>
-  //     </div>
-  //     <br />
-  //     <br />
-  //     <Show
-  //       show={modalShow}
-  //       onHide={() => setModalShow(false)}
-  //     />
-  //   </div>
-  // )
-
-  // function Show(props) {
-  //   return (
-  //     <Modal
-  //       {...props}
-  //       size="lg"
-  //       aria-labelledby="contained-modal-title-vcenter"
-  //       className="modal-control"
-  //       centered
-  //     >
-  //       <Modal.Header className="modal-dark noSelect">
-  //         <Modal.Title id="contained-modal-title-vcenter" className="modal-title">
-  //           課程資訊 - {table.classname}
-  //         </Modal.Title>
-  //         <CloseButton variant="white" aria-label="Hide" onClick={props.onHide} />
-  //       </Modal.Header>
-  //       <Modal.Body className="modal-dark">
-  //         <p className="modal-body-title noSelect">MEET連結:</p>
-  //         <p className="modal-body-meet-link">{table.meet}{/*<i className="copy" onclick={ navigator.clipboard.writeText(table.meet) }><Icon.Clipboard /></i>*/}</p>
-  //         <br />
-  //         <p className="modal-body-title noSelect">GC課程代碼:</p>
-  //         <p className="modal-body-gc-code">{table.classroom}</p>
-  //         <br />
-  //       </Modal.Body>
-  //       <Modal.Footer className="modal-dark noSelect">
-  //         <Button variant="false" onClick={props.onHide} className="modal-button"><p className="modal-button-text">關閉</p></Button>
-  //       </Modal.Footer>
-  //     </Modal>
-  //   );
-  // }
 }
 
 
