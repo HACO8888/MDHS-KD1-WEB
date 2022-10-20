@@ -48,11 +48,11 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* <br />
+            <br />
             <br />
             <h1 className='text-4xl'>最新公告</h1>
             <br />
-            <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+            <div className="overflow-x-auto relative shadow-md sm:rounded-lg w-[100%] md:w-[60%] ml-[0%] md:ml-[20%]">
                 <table className="w-full text-sm text-left text-white">
                     <thead className="text-xs uppercase bg-indigo-800 text-white">
                         <tr>
@@ -65,7 +65,7 @@ export default function Home() {
                             <th scope="col" className="py-3 px-6">
                                 內容
                             </th>
-                            <th scope="col" className="py-3 px-6 text-right">
+                            <th scope="col" className="py-3 px-6">
                                 <span className="sr-only">分享</span>
                             </th>
                         </tr>
@@ -82,12 +82,12 @@ export default function Home() {
                                 TEST內容TEST內容TEST內容TEST內容TEST內容
                             </td>
                             <td className="py-4 px-6 text-right">
-                                <a href="#" className="font-medium text-white hover:underline">分享</a>
+                                <a href="#/announcement/1" className="font-medium text-white hover:underline">完整內容</a>
                             </td>
                         </tr>
                         <tr className="bg-indigo-500 hover:bg-indigo-400">
                             <th scope="row" className="py-4 px-6 text left">
-                                1
+                                2
                             </th>
                             <td className="py-4 px-6">
                                 TEST標題
@@ -96,14 +96,14 @@ export default function Home() {
                                 TEST內容TEST內容TEST內容TEST內容TEST內容
                             </td>
                             <td className="py-4 px-6 text-right">
-                                <a href="#" className="font-medium text-white hover:underline">分享</a>
+                                <a href="#/announcement/2" className="font-medium text-white hover:underline">查看內容</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <br />
-            <br /> */}
+            <br />
             <br />
             <h1 className='text-4xl'>常用連結</h1>
             <br />
