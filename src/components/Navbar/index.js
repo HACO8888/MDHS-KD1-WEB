@@ -34,7 +34,7 @@ function NavBar() {
                                 <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
                                 <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
                             </svg>
-                            首頁
+                            網站首頁
                         </a>
                         <a href="/course" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -120,7 +120,7 @@ function NavBar() {
                                 <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
                                 <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
                             </svg>
-                            首頁
+                            網站首頁
                         </a>
                         <a href="/course" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-event" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
