@@ -9,7 +9,7 @@ export default function Home() {
     const db_id = params.get("id")
     React.useEffect(() => {
         axios
-            .get('http://localhost:8080/test?id=' + db_id)
+            .get('https://api.kd1.haco.tw/test?id=' + db_id)
             .then((response) => {
                 if (!response.data.message && db_id) {
                     setGet(response.data);
@@ -52,14 +52,14 @@ export default function Home() {
     function Submit() {
         if (!db_id) {
             axios
-                .post('http://localhost:8080/test?id=')
+                .post('https://api.kd1.haco.tw/test?id=')
                 .then((response) => {
                     console.log(response.data)
                     alert(response.data.message)
                 });
         } else {
             axios
-                .post('http://localhost:8080/test?id=' + db_id)
+                .post('https://api.kd1.haco.tw/test?id=' + db_id)
                 .then((response) => {
                     console.log(response.data)
                     alert(response.data.message)

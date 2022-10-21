@@ -1,22 +1,55 @@
 import './index.css'
-import 'react-slideshow-image/dist/styles.css'
 import React from "react"
+import axios from "axios";
 
 
 export default function Home() {
 
     const [show, setShow] = React.useState(false);
+    const [anns, setAnns] = React.useState({ '0': { "ID": "No Data", "Title": "No Data", "Content": "No Data" } });
 
     React.useEffect(() => {
         if (window.location.href.indexOf("k1d1.haco.tw") > -1) {
-            setShow(!show)
+            setShow(!show)``
         } else if (window.location.href.indexOf("test.haco.tw") > -1) {
             setShow(!show)
         } else if (window.location.href.indexOf("localhost") > -1) {
             setShow(!show)
         }
+        setAnns([{ 'ID': 'No Data', 'Title': 'No Data', 'Content': 'No Data' }]);
+        axios
+            .get('https://api.kd1.haco.tw/announcements')
+            .then((response) => {
+                if (response.data !== undefined) {
+                    setAnns(response.data);
+                }
+            });
+        // eslint-disable-next-line
     }, []);
 
+    const Html = [];
+    for (var i = 0; i < anns.length; i++) {
+        Html.push(
+            <tr className="bg-indigo-500">
+                <th scope="row" className="py-5 px-6">
+                    {anns[i].ID}
+                </th>
+                <td className="py-5 px-6">
+                    {anns[i].Title}
+                </td>
+                <td className="py-7 px-6 hidden md:inline-flex align-center">
+                    {anns[i].Content.slice(0, 25)} . . .
+                </td>
+                <td className="py-5 px-6 text-right">
+                    <a href={"#/announcement/" + anns[i].ID} className="font-medium text-white underline">
+                        <button className='bg-indigo-600 hover:bg-indigo-700 rounded-lg px-2 py-2'>
+                            完整內容
+                        </button>
+                    </a>
+                </td>
+            </tr>
+        );
+    }
 
     return (
         <div className="select-none">
@@ -56,13 +89,13 @@ export default function Home() {
                 <table className="w-full text-sm text-left text-white">
                     <thead className="text-xs uppercase bg-indigo-800 text-white">
                         <tr>
-                            <th scope="col" className="py-3 px-6 text left">
+                            <th scope="col" className="py-3 px-6">
                                 ID
                             </th>
                             <th scope="col" className="py-3 px-6">
                                 標題
                             </th>
-                            <th scope="col" className="py-3 px-6">
+                            <th scope="col" className="py-3 px-6 hidden md:inline-flex">
                                 內容
                             </th>
                             <th scope="col" className="py-3 px-6">
@@ -71,34 +104,7 @@ export default function Home() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className="bg-indigo-500 hover:bg-indigo-400">
-                            <th scope="row" className="py-4 px-6 text left">
-                                1
-                            </th>
-                            <td className="py-4 px-6">
-                                TEST
-                            </td>
-                            <td className="py-4 px-6">
-                                TEST內容TEST內容TEST內容TEST內容TEST內容
-                            </td>
-                            <td className="py-4 px-6 text-right">
-                                <a href="#/announcement/1" className="font-medium text-white hover:underline">完整內容</a>
-                            </td>
-                        </tr>
-                        <tr className="bg-indigo-500 hover:bg-indigo-400">
-                            <th scope="row" className="py-4 px-6 text left">
-                                2
-                            </th>
-                            <td className="py-4 px-6">
-                                TEST標題
-                            </td>
-                            <td className="py-4 px-6">
-                                TEST內容TEST內容TEST內容TEST內容TEST內容
-                            </td>
-                            <td className="py-4 px-6 text-right">
-                                <a href="#/announcement/2" className="font-medium text-white hover:underline">查看內容</a>
-                            </td>
-                        </tr>
+                        {Html}
                     </tbody>
                 </table>
             </div>
@@ -107,10 +113,12 @@ export default function Home() {
             <br />
             <h1 className='text-4xl'>常用連結</h1>
             <br />
-            <a href='/course'><button type="button" className="text-white bg-gradient-to-r bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">課表</button></a>
-            <a href='/people'><button type="button" className="text-white bg-gradient-to-r bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">人物</button></a>
-            <a href='/note'><button type="button" className="text-white bg-gradient-to-r bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">筆記</button></a>
-            <a href='/test'><button type="button" className="text-white bg-gradient-to-r bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">測試</button></a>
+            <a href='/course'><button type="button" className="text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">課表</button></a>
+            <a href='/people'><button type="button" className="text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">人物</button></a>
+            <a href='/note'><button type="button" className="text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">筆記</button></a>
+            <a href='/test'><button type="button" className="text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 md:w-[15%] w-[40%] h-20">測試</button></a>
+            <br />
+            <br />
             <br />
             <br />
         </div>
