@@ -38,9 +38,9 @@ export default function Home() {
             </div>
             <br />
             <div className="flex w-[30%] ml-[35%]">
-                {/* <div className="flex-1">
+                <div className="flex-1">
                     <a href="/test?id=1"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-xl">增加Param</button></a>
-                </div> */}
+                </div>
                 <div className="flex-1">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-xl" onClick={Submit}>測試</button>
                 </div>
