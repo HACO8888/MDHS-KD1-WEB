@@ -1,17 +1,14 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import './index.css';
-// import Nav from 'react-bootstrap/Nav';
-// import Badge from 'react-bootstrap/Badge';
-// import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
+import { Cookies } from 'react-cookie';
 
 function NavBar() {
+    const cookies = new Cookies();
     const [navbarOpen, setNavbarOpen] = React.useState(false);
-    const [loginModal, setLoginModal] = React.useState(false);
+    // console.log(cookies.get('discord'));
     return (
         <>
-            <nav className="bg-gray-800 px-4 py-3">
+            <nav className="bg-gray-800 px-4 py-3 select-none">
                 <div className="flex justify-between item-center">
                     <a href="/" className="flex items-center flex-shrink-0 text-white mr-6 noSelect">
                         {/* <img width="50PX" src='/logo.png' alt="logo" /> */}
@@ -106,8 +103,21 @@ function NavBar() {
                                 <line x1="4" y1="18" x2="20" y2="18"></line>
                             </svg>
                         </button>
-                        <button className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal" onClick={() => setLoginModal(!loginModal)}>
-                            登入
+                        <button className={"text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" data-modal-toggle="authentication-modal" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol + window.location.hostname) +"/login&response_type=token&scope=identify", "_parent")}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-discord flex-1 align-center" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <circle cx="9" cy="12" r="1"></circle>
+                                <circle cx="15" cy="12" r="1"></circle>
+                                <path d="M7.5 7.5c3.5 -1 5.5 -1 9 0"></path>
+                                <path d="M7 16.5c3.5 1 6.5 1 10 0"></path>
+                                <path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-1 2.5"></path>
+                                <path d="M8.5 17c0 1 -1.356 3 -1.832 3c-1.429 0 -2.698 -1.667 -3.333 -3c-.635 -1.667 -.476 -5.833 1.428 -11.5c1.388 -1.015 2.782 -1.34 4.237 -1.5l1 2.5"></path>
+                            </svg>
+                            <p className="flex-2 ml-[5px] align-center">登入</p>
+                        </button>
+                        <button className={"text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-3 py-3 text-center flex" + (cookies.get('discord') ? "" : " hidden")} type="button" data-modal-toggle="authentication-modal" onClick={(e) => window.open("/logout")}>
+                            <img className="flex-1 align-center rounded-full w-[25px] m-[auto]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".png")} />
+                            <p className="flex-2 m-[auto] ml-[5px] align-center">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
                         </button>
                     </div>
                 </div>
@@ -163,78 +173,6 @@ function NavBar() {
                     </div>
                 </div>
             </nav>
-            {/* <div id="authentication-modal" tabindex="-1" aria-hidden="true" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-                <div className="relative p-4 w-full max-w-md h-full md:h-auto">
-                    <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                        <button type="button" className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
-                            <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                            <span className="sr-only">Close modal</span>
-                        </button>
-                        <div className="py-6 px-6 lg:px-8">
-                            <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-                            <form className="space-y-6" action="#">
-                                <div>
-                                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
-                                </div>
-                                <div>
-                                    <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
-                                </div>
-                                <div className="flex justify-between">
-                                    <div className="flex items-start">
-                                        <div className="flex items-center h-5">
-                                            <input id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
-                                        </div>
-                                        <label for="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                                    </div>
-                                    <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                                </div>
-                                <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-                                <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                    Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            {/*  <div id="authentication-modal" tabIndex="-1" aria-hidden="true" className={"overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full" + (loginModal ? "" : " hidden")}>
-                <div className="relative p-4 w-full max-w-md h-full md:h-auto">
-                    <div className="relativerounded-lg shadow dark:bg-gray-700">
-                        <button type="button" className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal" onClick={() => setLoginModal(!loginModal)}>
-                            <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                            <span className="sr-only">Close modal</span>
-                        </button>
-                        <div className="py-6 px-6 lg:px-8">
-                            <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-                            <form className="space-y-6" action="#">
-                                <div>
-                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
-                                </div>
-                                <div>
-                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
-                                </div>
-                                <div className="flex justify-between">
-                                    <div className="flex items-start">
-                                        <div className="flex items-center h-5">
-                                            <input id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
-                                        </div>
-                                        <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                                    </div>
-                                    <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                                </div>
-                                <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-                                <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                    Not registered? <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </>
     )
 }

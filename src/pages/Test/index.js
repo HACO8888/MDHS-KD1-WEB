@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useLocation } from "react-router-dom"
 
-export default function Home() {
+export default function Test() {
     const location = useLocation()
     const params = new URLSearchParams(location.search)
     const [get, setGet] = React.useState({ "testID": "No Data", "testTitle": "No Data", "testContent": "No Data" });

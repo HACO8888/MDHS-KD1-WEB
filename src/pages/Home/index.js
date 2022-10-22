@@ -5,6 +5,7 @@ import axios from "axios";
 
 export default function Home() {
 
+
     const [show, setShow] = React.useState(false);
     const [anns, setAnns] = React.useState({ '0': { "ID": "No Data", "Title": "No Data", "Content": "No Data" } });
 
@@ -40,7 +41,7 @@ export default function Home() {
                 <td className="py-7 px-6 hidden md:inline-flex align-center">
                     {anns[i].Content.slice(0, 25)} . . .
                 </td>
-                <td className="py-5 px-6 text-right">
+                <td className="py-5 px-6">
                     <a href={"#/announcement/" + anns[i].ID} className="font-medium text-white underline">
                         <button className='bg-indigo-600 hover:bg-indigo-700 rounded-lg px-2 py-2'>
                             完整內容
@@ -99,7 +100,7 @@ export default function Home() {
                                 內容
                             </th>
                             <th scope="col" className="py-3 px-6">
-                                <span className="sr-only">分享</span>
+                                查看
                             </th>
                         </tr>
                     </thead>

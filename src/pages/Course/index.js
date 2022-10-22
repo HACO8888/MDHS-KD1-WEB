@@ -258,7 +258,7 @@ export default function Course() {
               <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.classroom}</p>
             </div>
             <div className="p-6 space-x-2 rounded-b border-t border-gray-600 select-none">
-              <button data-modal-toggle="medium-modal" type="button" className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>關閉</button>
+              <button data-modal-toggle="medium-modal" type="button" className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-indigo-600 hover:bg-indigo-700" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>關閉</button>
             </div>
           </div>
         </div>
