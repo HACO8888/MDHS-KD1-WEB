@@ -35,6 +35,7 @@ export default function Login() {
     setTimeout(function() {
        window.location.replace('/');
     }, 600);
-    return <div className="mt-[75%] md:mt-[25%]"><h1 className="text-4xl md:text-4x">資料讀取中 . . . </h1></div>;
+    // return <div className="mt-[75%] md:mt-[25%]"><h1 className="text-4xl md:text-4x">資料讀取中 . . . </h1></div>;
+    return <></>
 }
 
