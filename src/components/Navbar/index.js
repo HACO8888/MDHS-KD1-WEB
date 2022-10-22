@@ -103,7 +103,7 @@ function NavBar() {
                                 <line x1="4" y1="18" x2="20" y2="18"></line>
                             </svg>
                         </button>
-                        <button className={"text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" data-modal-toggle="authentication-modal" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol + window.location.hostname) +"/login&response_type=token&scope=identify", "_parent")}>
+                        <button className={"text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" data-modal-toggle="authentication-modal" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol) + "//" + (window.location.hostname) +"/login&response_type=token&scope=identify", "_parent")}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-discord flex-1 align-center" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <circle cx="9" cy="12" r="1"></circle>
