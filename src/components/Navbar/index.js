@@ -115,7 +115,7 @@ function NavBar() {
                             </svg>
                             <p className="flex-2 ml-[5px] align-center">登入</p>
                         </button>
-                        <button className={"text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-3 py-3 text-center flex" + (cookies.get('discord') ? "" : " hidden")} type="button" data-modal-toggle="authentication-modal" onClick={(e) => window.open("/logout")}>
+                        <button className={"text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-3 py-3 text-center flex" + (cookies.get('discord') ? "" : " hidden")} type="button" data-modal-toggle="authentication-modal" onClick={(e) => window.location.replace('/logout')}>
                             <img className="flex-1 align-center rounded-full w-[25px] m-[auto]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".png")} />
                             <p className="flex-2 m-[auto] ml-[5px] align-center">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
                         </button>
