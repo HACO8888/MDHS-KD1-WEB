@@ -11,7 +11,7 @@ export default function Home() {
 
     React.useEffect(() => {
         if (window.location.href.indexOf("k1d1.haco.tw") > -1) {
-            setShow(!show)``
+            setShow(!show)
         } else if (window.location.href.indexOf("test.haco.tw") > -1) {
             setShow(!show)
         } else if (window.location.href.indexOf("localhost") > -1) {
