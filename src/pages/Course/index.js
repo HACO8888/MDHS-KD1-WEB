@@ -45,7 +45,7 @@ export default function Course() {
       <br />
       <div className="overflow-x-auto relative sm:rounded-lg w-full md:w-4/5 md:ml-[10%] select-none ">
         <table className="w-full text-sm text-center text-gray-400">
-          <thead className="text-xs text-gray-400 uppercase bg-gray-800">
+          <thead className="text-xs text-gray-400 uppercase bg-indigo-800">
             <tr>
               <th colSpan="2" scope="col" className="py-3 px-6 border-white border-r border-b w-auto align-middle">
                 <p className="text-base">節數/時間</p>
@@ -78,8 +78,8 @@ export default function Course() {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第一節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第一節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">08:15<br />｜<br />09:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>
                 <p className="text-base">{post.table.day1[1].classname}</p>
@@ -97,8 +97,8 @@ export default function Course() {
                 <p className="text-base">{post.table.day5[1].classname}</p>
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第二節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第二節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">09:15<br />｜<br />10:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[2]) }}>
                 <p className="text-base">{post.table.day1[2].classname}</p>
@@ -116,8 +116,8 @@ export default function Course() {
                 <p className="text-base">{post.table.day5[2].classname}</p>
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第三節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第三節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">10:15<br />｜<br />11:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[3]) }}>
                 <p className="text-base">{post.table.day1[3].classname}</p>
@@ -135,8 +135,8 @@ export default function Course() {
                 <p className="text-base">{post.table.day5[3].classname}</p>
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第四節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第四節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">11:15<br />｜<br />12:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[4]) }}>
                 <p className="text-base">{post.table.day1[4].classname}</p>
@@ -154,8 +154,8 @@ export default function Course() {
                 <p className="text-base">{post.table.day5[4].classname}</p>
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第五節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第五節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">13:20<br />｜<br />14:10</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[5]) }}>
                 <p className="text-base">{post.table.day1[5].classname}</p>
@@ -173,8 +173,8 @@ export default function Course() {
                 <p className="text-base">X</p>{ /* {post.table.day5[5].classname} */}
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第六節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第六節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">14:20<br />｜<br />15:10</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[6]) }}>
                 <p className="text-base">{post.table.day1[6].classname}</p>
@@ -192,8 +192,8 @@ export default function Course() {
                 <p className="text-base">X</p> { /* {post.table.day5[6].classname} */}
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r border-b align-middle w-[5%] text-base">第七節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第七節</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">15:20<br />｜<br />16:10</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[7]) }}>
                 <p className="text-base">{post.table.day1[7].classname}</p>
@@ -211,8 +211,8 @@ export default function Course() {
                 <p className="text-base">{post.table.day5[7].classname}</p>
               </td>
             </tr>
-            <tr className="bg-gray-600 border-gray-500">
-              <th scope="row" className="py-4 px-6 font-mediumwhitespace-nowrap text-white border-white border-r align-middle w-[5%] text-base">第八節</th>
+            <tr className="bg-indigo-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r align-middle w-[5%] text-base">第八節</th>
               <th scope="row" className="py-4 px-6 border-white border-r align-middle w-[5%]">16:20<br />｜<br />17:10</th>
               <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[8]) }}>
                 <p className="text-base">{post.table.day1[8].classname}</p>
@@ -235,8 +235,9 @@ export default function Course() {
       </div>
       <br />
       <br />
-      <div id="medium-modal" tabIndex="-1" className={"overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full align-middle" + (modalShow ? "" : " hidden")}>
-        <div className="relative p-4 w-full m-[auto] mt-[90px] max-w-lg h-full md:h-auto align-middle">
+      <div id="medium-modal" tabIndex="-1" className={"modal fixed w-full h-full top-0 left-0 flex items-center justify-center" + (modalShow ? "" : " hidden")}>
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        <div className="modal-container w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
           <div className="relative rounded-lg shadow-2xl bg-slate-900">
             <div className="flex justify-between items-center p-5 rounded-t border-b border-gray-600 select-none">
               <h3 className="text-xl font-medium text-white">
@@ -252,13 +253,13 @@ export default function Course() {
               <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.teacher}</p>
               <br className="select-none" />
               <p className="text-left text-xl select-none">MEET連結：</p>
-              <p className="bg-slate-700 h-[40px] align-middle text-[23px] rounded text-left pl-[10px]">{table.meet}</p>
+              <p className="bg-slate-700 h-[40px] align-middle text-[22px] rounded text-left pl-[10px]">{table.meet.slice(0,36)}</p>
               <br className="select-none" />
               <p className="text-left text-xl select-none">GC課程代碼：</p>
               <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.classroom}</p>
             </div>
             <div className="p-6 space-x-2 rounded-b border-t border-gray-600 select-none">
-              <button data-modal-toggle="medium-modal" type="button" className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-indigo-600 hover:bg-indigo-700" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>關閉</button>
+              <button data-modal-toggle="medium-modal" type="button" className="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-indigo-600 hover:bg-indigo-700" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>關閉</button>
             </div>
           </div>
         </div>
