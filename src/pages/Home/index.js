@@ -7,7 +7,7 @@ export default function Home() {
 
 
     const [show, setShow] = React.useState(false);
-    const [anns, setAnns] = React.useState({ '0': { "ID": "No Data", "Title": "No Data", "Content": "No Data" } });
+    const [anns, setAnns] = React.useState([{ 'ID': 'No Data', 'Title': 'No Data', 'Content': 'No Data' }]);
 
     React.useEffect(() => {
         if (window.location.href.indexOf("k1d1.haco.tw") > -1) {
@@ -17,7 +17,6 @@ export default function Home() {
         } else if (window.location.href.indexOf("localhost") > -1) {
             setShow(!show)
         }
-        setAnns([{ 'ID': 'No Data', 'Title': 'No Data', 'Content': 'No Data' }]);
         axios
             .get('https://api.kd1.haco.tw/announcements')
             .then((response) => {
