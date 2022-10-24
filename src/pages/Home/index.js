@@ -64,11 +64,11 @@ export default function Home() {
                             </span>
                             <p className="ml-3 truncate font-medium text-white">
                                 <span className="md:hidden">本站已移至 kd1.haco.tw，將於10/31移除！</span>
-                                <span className="hidden md:inline text-xl">本站已移至 kd1.haco.tw，預計於民國111年10月31日移除本站！</span>
+                                <span className="hidden md:inline text-xl ">本站已移至 kd1.haco.tw，預計於民國111年10月31日移除本站！</span>
                             </p>
                         </div>
                         <div className="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
-                            <a href="https://kd1.haco.tw/" className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-cyan-50">移至新站</a>
+                            <a href="https://kd1.haco.tw/" className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-cyan-50 text-black">移至新站</a>
                         </div>
                         <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
                             <button type="button" className="-mr-1 flex rounded-md p-2 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2" onClick={() => setShow(!show)}>
