@@ -120,7 +120,7 @@ function NavBar() {
                             </button>
                             <button className={"items-center text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-sm px-4 py-3 text-center flex m-[auto] w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
                                 <img className="flex-1 align-center rounded-full w-[25px] m-[auto]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".png")} />
-                                <p className="flex-2 m-[auto] align-center">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
+                                <p className="flex-2 m-[auto] mr-[5px] align-center">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
                                 <svg className="ml-2 w-4 h-4 hidden md:inline" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
                             <div className={"m-[auto] absolute mt-[5px] z-10 block w-[30%] md:w-[10%] bg-indigo-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
