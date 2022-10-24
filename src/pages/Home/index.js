@@ -38,7 +38,7 @@ export default function Home() {
                     {anns[i].Title}
                 </td>
                 <td className="py-7 px-6 hidden md:inline-flex align-center">
-                    {anns[i].Content.slice(0, 20)}
+                    {anns[i].Content.slice(0, 25)}
                 </td>
                 <td className="py-5 px-6">
                     <a href={"#/announcement/" + anns[i].ID} className="font-medium text-white underline">
