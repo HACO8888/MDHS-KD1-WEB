@@ -125,7 +125,7 @@ function NavBar() {
                                 <p className="block align-center flex-1">#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
                                 <svg className="ml-2 w-4 h-4 hidden md:inline" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
-                            <div className={"m-[auto] absolute mt-[5px] z-10 block w-[40%] md:w-[10%] bg-indigo-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
+                            <div className={"m-[auto] absolute mt-[5px] z-10 block w-[30%] md:w-[10%] bg-indigo-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
                                 <ul className="py-1 text-smtext-gray-200 ml-[5px] mr-[5px]">
                                     <li>
                                         <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-indigo-500 md:hover:bg-indigo-400 text-white">管理後臺</a>
