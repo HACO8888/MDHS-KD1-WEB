@@ -73,7 +73,7 @@ function NavBar() {
                             測試頁面
                         </a>
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-1">
                         {/* <a href="#" className="text-gray-400 py-3 px-2 hover:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width="24"
                                 height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
@@ -118,7 +118,7 @@ function NavBar() {
                                 </svg>
                                 <p className="flex-2 ml-[5px] align-center">登入</p>
                             </button>
-                            <button className={"items-center text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-sm px-3 py-3 text-center flex m-[auto] w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
+                            <button className={"items-center text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-sm px-3 py-3 text-center flex w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
                                 <img className="flex-1 align-center rounded-full w-[25px] m-[auto] mr-[5px]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".png")} />
                                 <p className="flex-2 m-[auto] mr-[10px] align-center">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
                                 <svg className="ml-2 w-4 h-4 hidden md:inline" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
