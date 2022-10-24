@@ -106,7 +106,7 @@ function NavBar() {
                         </button>
 
                         <div>
-                            {/* <button className={"text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol) + "//" + (window.location.hostname + (window.location.port ? ':' + window.location.port : '')) + "/login&response_type=token&scope=identify", "_parent")}>
+                            {/* <button className={"text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol) + "//" + (window.location.hostname + (window.location.port ? ':' + window.location.port : '')) + "/login&response_type=token&scope=identify", "_parent")}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-discord flex-1 align-center" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <circle cx="9" cy="12" r="1"></circle>
@@ -118,23 +118,23 @@ function NavBar() {
                                 </svg>
                                 <p className="flex-2 ml-[5px] align-center">登入</p>
                             </button>
-                            <button className={"items-center text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-sm px-3 py-3 text-center flex w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
+                            <button className={"items-center text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-sm px-3 py-3 text-center flex w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
                                 <img className="align-center rounded-full flex-none w-[25px] h-[25px] m-[auto] mr-[3px]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".png")} alt="user-img"/>
                                 <p className="block truncate align-center flex-initial max-w-[60px]">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}</p>
                                 <p className="block align-center flex-1">#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p>
                                 <svg className="ml-2 w-4 h-4 hidden md:inline" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
-                            <div className={"m-[auto] absolute mt-[5px] z-10 block w-[auto] md:w-[auto] bg-indigo-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
+                            <div className={"m-[auto] absolute mt-[5px] z-10 block w-[auto] md:w-[auto] bg-cyan-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
                                 <ul className="py-1 text-smtext-gray-200 ml-[5px] mr-[5px]">
                                     <li>
-                                        <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-indigo-500 md:hover:bg-indigo-400 text-white">管理後臺</a>
+                                        <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">管理後臺</a>
                                     </li>
                                     <li>
-                                        <a href="/logout" className="block py-2 px-4 w-[100%] mb-[5px] rounded-lg hover:bg-indigo-500 md:hover:bg-indigo-400 text-white">登出帳號</a>
+                                        <a href="/logout" className="block py-2 px-4 w-[100%] mb-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">登出帳號</a>
                                     </li>
                                 </ul>
                             </div> */}
-                            <button className={"text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-full text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol) + "//" + (window.location.hostname + (window.location.port ? ':' + window.location.port : '')) + "/login&response_type=token&scope=identify", "_parent")}>
+                            <button className={"text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-full text-sm px-5 py-3 text-center flex" + (!cookies.get('discord') ? "" : " hidden")} type="button" onClick={(e) => window.open("https://discord.com/api/oauth2/authorize?client_id=1033339136028979330&redirect_uri=" + (window.location.protocol) + "//" + (window.location.hostname + (window.location.port ? ':' + window.location.port : '')) + "/login&response_type=token&scope=identify", "_parent")}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-discord flex-1 align-center" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <circle cx="9" cy="12" r="1"></circle>
@@ -146,19 +146,19 @@ function NavBar() {
                                 </svg>
                                 <p className="flex-2 ml-[5px] align-center">登入</p>
                             </button>
-                            <button className={"items-center text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-full text-xl px-3 py-3 text-center flex w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
+                            <button className={"items-center text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-full text-xl px-3 py-3 text-center flex w-[auto]" + (cookies.get('discord') ? "" : " hidden")} type="button" onClick={() => setLoginMenu(!loginMenu)}>
                                 <img className="align-center rounded-full flex-none w-[25px] h-[25px] m-[auto] mr-[3px]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".webp")} alt="user-img" />
                                 {/* <p className="block truncate align-center flex-initial max-w-[60px]">{!cookies.get('discord') ? "" : cookies.get('discord')[0]}</p>
                                 <p className="block align-center flex-1">#{!cookies.get('discord') ? "" : cookies.get('discord')[1]}</p> */}
                                 <svg className="ml-2 w-5 h-5 flex-1" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
-                            <div className={"w-[75px] m-[auto] absolute mt-[5px] mr-[10px] z-10 block bg-indigo-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
+                            <div className={"w-[75px] m-[auto] absolute mt-[5px] mr-[10px] z-10 block bg-cyan-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
                                 <ul className="py-1 text-smtext-gray-200 ml-[5px] mr-[5px]">
                                     <li>
-                                        <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-indigo-500 md:hover:bg-indigo-400 text-white">管理</a>
+                                        <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">管理</a>
                                     </li>
                                     <li>
-                                        <a href="/logout" className="block py-2 px-4 w-[100%] mb-[5px] rounded-lg hover:bg-indigo-500 md:hover:bg-indigo-400 text-white">登出</a>
+                                        <a href="/logout" className="block py-2 px-4 w-[100%] mb-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">登出</a>
                                     </li>
                                 </ul>
                             </div>

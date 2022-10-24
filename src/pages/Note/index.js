@@ -27,10 +27,10 @@ export default function Note() {
             <br />
             <h1 className='text-5xl'>班級記事</h1>
             <br />
-            <Button className="text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 w-[auto] h-15" onClick={() => setPublicShow(!publicShow)}>
+            <Button className="text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 w-[auto] h-15" onClick={() => setPublicShow(!publicShow)}>
                 新增共享筆記
             </Button>
-            <Button className="text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 w-[auto] h-15 disabled:opacity-50 disabled:hover:bg-indigo-600" onClick={NotReady} disabled>
+            <Button className="text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2 w-[auto] h-15 disabled:opacity-50 disabled:hover:bg-cyan-600" onClick={NotReady} disabled>
                 新增私人筆記
             </Button>
             <br />
@@ -74,7 +74,7 @@ export default function Note() {
                                     <br />
                                 </div>
                                 <div className="p-6 space-x-4 rounded-b border-t border-gray-600 select-none w-[100%]">
-                                    <button type="submit" className="w-full text-white bg-indigo-600 hover:bg-indigo-700 font-medium rounded-lg text-base px-5 py-2.5 text-center">送出筆記</button>
+                                    <button type="submit" className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center">送出筆記</button>
                                 </div>
                             </form>
                         </div>
