@@ -41,7 +41,7 @@ export default function Home() {
                     {anns[i].Content.slice(0, 25)}
                 </td>
                 <td className="py-5 px-6">
-                    <a href={"#/announcement/" + anns[i].ID} className="font-medium text-white underline">
+                    <a href={"/announcements/" + anns[i].ID} className="font-medium text-white underline">
                         <button className='bg-cyan-600 hover:bg-cyan-700 rounded-lg px-2 py-2'>
                             完整內容
                         </button>
