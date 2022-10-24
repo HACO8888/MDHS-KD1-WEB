@@ -34,13 +34,13 @@ export default function Home() {
                 {/* <th scope="row" className="py-5 px-6">
                     {anns[i].ID}
                 </th> */}
-                <td className="py-3 px-6">
+                <td className="py-5 px-6">
                     {anns[i].Title}
                 </td>
-                <td className="truncate py-3 px-6 align-center">
+                <td className="py-7 px-6 hidden md:inline-flex align-center">
                     {anns[i].Content.slice(0, 20)}
                 </td>
-                <td className="py-3 px-6">
+                <td className="py-5 px-6">
                     <a href={"#/announcement/" + anns[i].ID} className="font-medium text-white underline">
                         <button className='bg-cyan-600 hover:bg-cyan-700 rounded-lg px-2 py-2'>
                             完整內容
@@ -95,7 +95,7 @@ export default function Home() {
                             <th scope="col" className="py-3 px-6">
                                 標題
                             </th>
-                            <th scope="col" className="py-3 px-6">
+                            <th scope="col" className="py-3 px-6 hidden md:inline-flex">
                                 內容
                             </th>
                             <th scope="col" className="py-3 px-6">
