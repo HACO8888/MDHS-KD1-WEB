@@ -20,7 +20,26 @@ export default function Home() {
 
     return (
         <div className="select-none">
-            {JSON.stringify(ann)}
+            {/* {JSON.stringify(ann)} */}
+            <br />
+            <br />
+            <a href="/" className="text-red-500 text-4xl">返回首頁</a>
+            <br />
+            <br />
+            <br />
+            <p className='text-3xl'>公告編號</p>
+            <br />
+            <p className='text-2xl'>{ann.ID}</p>
+            <br />
+            <br />
+            <p className='text-3xl'>公告標題</p>
+            <br />
+            <p className='text-2xl'>{ann.Title}</p>
+            <br />
+            <br />
+            <p className='text-3xl'>公告內容</p>
+            <br />
+            <p className='text-2xl w-[80%] ml-[10%]'>{ann.Content}</p>
         </div>
     )
 }
