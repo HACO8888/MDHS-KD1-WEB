@@ -40,6 +40,8 @@ export default function Home() {
             <p className='text-3xl'>公告內容</p>
             <br />
             <p className='text-2xl w-[80%] ml-[10%]'>{ann.Content}</p>
+            <br />
+            <br />
         </div>
     )
 }
