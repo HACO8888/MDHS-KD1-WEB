@@ -78,7 +78,7 @@ function NavBar() {
                         {/* Notify Button Start */}
                         <div>
                             <button className="text-white bg-cyan-600 hover:bg-cyan-600 md:hover:bg-cyan-700 font-medium rounded-full text-sm px-3 py-3 text-center flex"  onClick={() => setColorMenu(!colorMenu)}>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-palette" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"></path>
                                     <circle cx="7.5" cy="10.5" r=".5" fill="currentColor"></circle>
@@ -126,7 +126,7 @@ function NavBar() {
                                 <img className="align-center rounded-full flex-none w-[25px] h-[25px] m-[auto] mr-[3px]" src={(!cookies.get('discord') ? "" : "https://cdn.discordapp.com/avatars/" + (!cookies.get('discord') ? "" : cookies.get('discord')[2]) + "/" + (!cookies.get('discord') ? "" : cookies.get('discord')[3]) + ".webp")} alt="user-img" />
                                 <svg className="ml-2 w-5 h-5 flex-1" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
-                            <div className={"w-[75px] m-[auto] absolute mt-[5px] mr-[10px] z-10 block bg-cyan-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
+                            <div className={"w-[75px] m-[auto] absolute mt-[5px] mr-[10px] z-5 block bg-cyan-500 rounded-lg" + (loginMenu ? "" : " hidden")}>
                                 <ul className="py-1 text-smtext-gray-200 ml-[5px] mr-[5px]">
                                     <li>
                                         <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">管理</a>
