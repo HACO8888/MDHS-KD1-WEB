@@ -77,7 +77,7 @@ function NavBar() {
                     <div className="flex gap-3">
                         {/* Notify Button Start */}
                         <div>
-                            <button className="text-white bg-cyan-600 hover:bg-cyan-600 md:hover:bg-cyan-700 font-medium rounded-full text-sm px-3 py-3 text-center flex"  onClick={() => setColorMenu(!colorMenu)}>
+                            <button className="text-white bg-cyan-600 hover:bg-cyan-600 md:hover:bg-cyan-700 font-medium rounded-full text-sm px-3 py-3 text-center flex" onClick={() => setColorMenu(!colorMenu)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-palette" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"></path>
@@ -86,17 +86,26 @@ function NavBar() {
                                     <circle cx="16.5" cy="10.5" r=".5" fill="currentColor"></circle>
                                 </svg>
                             </button>
-                            {/* <div className={"w-[100px] m-[auto] absolute mt-[5px] mr-[20px] z-10 block bg-cyan-500 rounded-lg" + (colorMenu ? "" : " hidden")}>
-                                <ul className="py-1 text-smtext-gray-200 ml-[5px] mr-[5px]">
-                                    <li>
-                                        <a href="#/admin" className="block py-2 px-4 w-[100%] mt-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">管理</a>
-                                        
-                                    </li>
-                                    <li>
-                                        <a href="/logout" className="block py-2 px-4 w-[100%] mb-[5px] rounded-lg hover:bg-cyan-500 md:hover:bg-cyan-400 text-white">登出</a>
-                                    </li>
-                                </ul>
-                            </div> */}
+                            <div className={"m-[auto] absolute right-0 mt-[5px] mr-[165px] md:mr-[105px] w-52 rounded-lg shadow-2xl bg-cyan-500 z-50" + (colorMenu ? "" : " hidden")}>
+                                <br />
+                                <div className="flex">
+                                    <div className="mb-[10px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-red-600"></div>
+                                    <div className="mb-[10px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-orange-400"></div>
+                                    <div className="mb-[5px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-yellow-400"></div>
+                                </div>
+                                <div className="flex">
+                                    <div className="mb-[5px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-lime-400"></div>
+                                    <div className="mb-[5px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-green-400"></div>
+                                    <div className="mb-[5px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-cyan-400"></div>
+                                </div>
+                                <div className="flex">
+                                    <div className="mb-[20px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-blue-600"></div>
+                                    <div className="mb-[20px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-indigo-800"></div>
+                                    <div className="mb-[20px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-purple-700"></div>
+                                </div>
+                                <p className="text-xl">開發中</p>
+                                <br></br>
+                            </div>
                         </div>
                         {/* Notify Button End */}
                         <button className="text-white bg-cyan-600 font-medium rounded-full text-sm px-3 py-3 text-center flex md:hidden" onClick={() => setNavbarOpen(!navbarOpen)}>
@@ -139,7 +148,7 @@ function NavBar() {
                         </div>
                     </div>
 
-                </div>
+                </div >
                 <div className={(navbarOpen ? "" : " hidden")}>
                     <div className="flex flex-col gap-1 py-3">
                         <a href="/" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex md:py-1">
@@ -191,7 +200,7 @@ function NavBar() {
                         </a>
                     </div>
                 </div>
-            </nav>
+            </nav >
         </>
     )
 }
