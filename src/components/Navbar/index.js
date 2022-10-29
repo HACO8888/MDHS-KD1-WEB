@@ -8,6 +8,20 @@ function NavBar() {
     const [loginMenu, setLoginMenu] = React.useState(false);
     const [colorMenu, setColorMenu] = React.useState(false);
 
+    // function ChangeColor(color) {
+    //     if (!localStorage.getItem('theme-color')) {
+    //         // console.log('No Theme Cookie, Color:' + color)
+    //         localStorage.setItem('theme-color', color)
+    //     } else {
+    //         localStorage.removeItem('theme-color')
+    //         localStorage.setItem('theme-color', color)
+    //     }
+    // }
+
+    const ChangeColor = (color) => {
+        localStorage.setItem('theme-color', color)
+    }
+
     return (
         <>
             <nav className="bg-gray-800 px-4 py-3 select-none max-w-[100%]">
@@ -74,10 +88,9 @@ function NavBar() {
                             測試頁面
                         </a>
                     </div>
-                    <div className="flex gap-3">
-                        {/* Notify Button Start */}
-                        <div>
-                            <button className="text-white bg-cyan-600 hover:bg-cyan-600 md:hover:bg-cyan-700 font-medium rounded-full text-sm px-3 py-3 text-center flex" onClick={() => setColorMenu(!colorMenu)}>
+                    <div className="flex gap-1">
+                        {/* <div>
+                            <button className={"text-white font-medium rounded-full text-sm px-3 py-3 text-center flex bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-600 hover:bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-600 md:hover:bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-700"} onClick={() => setColorMenu(!colorMenu)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-palette" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"></path>
@@ -86,28 +99,33 @@ function NavBar() {
                                     <circle cx="16.5" cy="10.5" r=".5" fill="currentColor"></circle>
                                 </svg>
                             </button>
-                            <div className={"m-[auto] absolute right-0 mt-[5px] mr-[165px] md:mr-[105px] w-52 rounded-lg shadow-2xl bg-cyan-500 z-50" + (colorMenu ? "" : " hidden")}>
+                            <div className={"m-[auto] absolute right-0 mt-[5px] mr-[165px] md:mr-[105px] w-52 rounded-lg shadow-2xl z-50 bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-500" + (colorMenu ? "" : " hidden")}>
                                 <br />
                                 <div className="flex">
-                                    <div className="mb-[10px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-red-600"></div>
-                                    <div className="mb-[10px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-orange-400"></div>
-                                    <div className="mb-[5px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-yellow-400"></div>
+                                    <div className="hover:cursor-pointer mb-[10px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-red-600" onClick={() => ChangeColor('red')}></div>
+                                    <div className="hover:cursor-pointer mb-[10px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-orange-400" onClick={() => ChangeColor('orange')}></div>
+                                    <div className="hover:cursor-pointer mb-[10px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-yellow-400" onClick={() => ChangeColor('yellow')}></div>
                                 </div>
                                 <div className="flex">
-                                    <div className="mb-[5px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-lime-400"></div>
-                                    <div className="mb-[5px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-green-400"></div>
-                                    <div className="mb-[5px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-cyan-400"></div>
+                                    <div className="hover:cursor-pointer mb-[10px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-lime-400" onClick={() => ChangeColor('lime')}></div>
+                                    <div className="hover:cursor-pointer mb-[10px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-green-400" onClick={() => ChangeColor('green')}></div>
+                                    <div className="hover:cursor-pointer mb-[10px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-cyan-400" onClick={() => ChangeColor('cyan')}></div>
                                 </div>
                                 <div className="flex">
-                                    <div className="mb-[20px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-blue-600"></div>
-                                    <div className="mb-[20px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-indigo-800"></div>
-                                    <div className="mb-[20px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-purple-700"></div>
+                                    <div className="hover:cursor-pointer mb-[20px] ml-[10%] w-12 h-12 rounded-lg flex-initial align-center bg-blue-600" onClick={() => ChangeColor('blue')}></div>
+                                    <div className="hover:cursor-pointer mb-[20px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-indigo-800" onClick={() => ChangeColor('indigo')}></div>
+                                    <div className="hover:cursor-pointer mb-[20px] ml-[5%] w-12 h-12 rounded-lg flex-initial align-center bg-purple-700" onClick={() => ChangeColor('purple')}></div>
                                 </div>
-                                <p className="text-xl">開發中</p>
-                                <br></br>
                             </div>
-                        </div>
-                        {/* Notify Button End */}
+                        </div> */}
+
+                        { /* Color All Start */ }
+                        
+                        <p className="bg-red-100 bg-red-200 bg-red-300 bg-red-400 bg-red-500 bg-red-600 bg-red-700 bg-red-800 bg-red-900"></p>
+                        <p className="bg-orange-100 bg-orange-200 bg-orange-300 bg-orange-400 bg-orange-500 bg-orange-600 bg-orange-700 bg-orange-800 bg-orange-900"></p>
+                        <p className="bg-yellow-100 bg-yellow-200 bg-yellow-300 bg-yellow-400 bg-yellow-500 bg-yellow-600 bg-yellow-700 bg-yellow-800 bg-yellow-900"></p>
+                        { /* Color All Ended */ }
+
                         <button className="text-white bg-cyan-600 font-medium rounded-full text-sm px-3 py-3 text-center flex md:hidden" onClick={() => setNavbarOpen(!navbarOpen)}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width="24"
                                 height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
@@ -147,7 +165,6 @@ function NavBar() {
                             </div>
                         </div>
                     </div>
-
                 </div >
                 <div className={(navbarOpen ? "" : " hidden")}>
                     <div className="flex flex-col gap-1 py-3">
