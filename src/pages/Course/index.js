@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import React from "react"
 import './index.css';
 
@@ -18,21 +18,21 @@ export default function Course() {
     }
   );
 
-  // React.useEffect(() => {
-  //   axios.get("http://aaaa.zapto.org/cloud/database/read",
-  //     {
-  //       headers: {
-  //         "access-control-expose-headers": "Authorization",
-  //         "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJRMTI0NzUxNTcxIiwidXNlclBXRCI6ImFhYWFAbmV3bWQiLCJyZW1lbWJlck1lIjoidHJ1ZSIsImlhdCI6MTY2NDc1Njc2MSwiZXhwIjozMjUwMzY4MTU2MX0.Ove9KKE23qt6ubrm_H-HXUZktbwTsOxxfWSpd4M5lrk",
-  //         "Content-Type": "application/json",
-  //         "Bypass-Tunnel-Reminder": "true"
-  //       },
-  //     }
-  //   ).then((response) => {
-  //     // console.log("API Response:" + response.status + " => " + response.statusText)
-  //     setPost(response.data);
-  //   });
-  // }, []);
+  React.useEffect(() => {
+    axios.get("https://cloud.newmd.eu.org/database/read",
+      {
+        headers: {
+          "access-control-expose-headers": "Authorization",
+          "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJRMTI0NzUxNTcxIiwidXNlclBXRCI6ImFhYWFAbmV3bWQiLCJyZW1lbWJlck1lIjoidHJ1ZSIsImlhdCI6MTY2NDc1Njc2MSwiZXhwIjozMjUwMzY4MTU2MX0.Ove9KKE23qt6ubrm_H-HXUZktbwTsOxxfWSpd4M5lrk",
+          "Content-Type": "application/json",
+          "Bypass-Tunnel-Reminder": "true"
+        },
+      }
+    ).then((response) => {
+      // console.log("API Response:" + response.status + " => " + response.statusText)
+      setPost(response.data);
+    });
+  }, []);
 
   if (!post) return setPost(Read());
 
@@ -236,7 +236,7 @@ export default function Course() {
       <br />
       <br />
       <div id="medium-modal" tabIndex="-1" className={"modal fixed w-full h-full top-0 left-0 flex items-center justify-center" + (modalShow ? "" : " hidden")}>
-        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        <div className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
         <div className="modal-container w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
           <div className="relative rounded-lg shadow-2xl bg-slate-900">
             <div className="flex justify-between items-center p-5 rounded-t border-b border-gray-600 select-none">
@@ -253,7 +253,7 @@ export default function Course() {
               <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.teacher}</p>
               <br className="select-none" />
               <p className="text-left text-xl select-none">MEET連結：</p>
-              <p className="bg-slate-700 h-[40px] align-middle text-[22px] rounded text-left pl-[10px]">{table.meet.slice(0,36)}</p>
+              <a href={table.meet} target="_blanket"><p className="bg-slate-700 h-[80px] align-middle text-[25px] rounded text-left pl-[5px] pr-[5px]">{table.meet}&emsp;(點擊跳轉)</p></a>
               <br className="select-none" />
               <p className="text-left text-xl select-none">GC課程代碼：</p>
               <p className="bg-slate-700 h-[40px] align-middle text-[25px] rounded text-left pl-[10px]">{table.classroom}</p>
