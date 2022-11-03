@@ -86,204 +86,204 @@ export default function Course() {
       <h1 className="text-5xl select-none">本學期課表</h1>
       <br />
       <br />
-      <div className="overflow-x-auto relative sm:rounded-lg w-full md:w-4/5 md:ml-[10%] select-none ">
-        <table className="max-w-screen text-sm text-center text-gray-400">
+      <div className="overflow-x-auto relative sm:rounded-lg w-full md:w-[60%] md:ml-[20%] select-none ">
+        <table className="w-[100%] text-sm text-center text-gray-400">
           <thead className="text-xs text-gray-400 uppercase bg-cyan-800">
             <tr>
               <th colSpan={isBigScreen ? "2" : "1"} scope="col" className="py-3 px-3 border-white border-r border-b w-auto align-middle">
-                <p className="text-base md:inline hidden">節數/時間</p>
-                <p className="text-base inline md:hidden">時間</p>
+                <p className="text-lg md:inline hidden">節數/時間</p>
+                <p className="text-lg inline md:hidden">時間</p>
               </th>
               <th scope="col" className="py-3 px-3 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base md:inline hidden">星期一</p>
-                  <p className="text-base inline md:hidden">一</p>
+                  <p className="text-lg md:inline hidden">星期一</p>
+                  <p className="text-lg inline md:hidden">一</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-3 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base md:inline hidden">星期二</p>
-                  <p className="text-base inline md:hidden">二</p>
+                  <p className="text-lg md:inline hidden">星期二</p>
+                  <p className="text-lg inline md:hidden">二</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-3 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base md:inline hidden">星期三</p>
-                  <p className="text-base inline md:hidden">三</p>
+                  <p className="text-lg md:inline hidden">星期三</p>
+                  <p className="text-lg inline md:hidden">三</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-3 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base md:inline hidden">星期四</p>
-                  <p className="text-base inline md:hidden">四</p>
+                  <p className="text-lg md:inline hidden">星期四</p>
+                  <p className="text-lg inline md:hidden">四</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-3 border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base md:inline hidden">星期五</p>
-                  <p className="text-base inline md:hidden">五</p>
+                  <p className="text-lg md:inline hidden">星期五</p>
+                  <p className="text-lg inline md:hidden">五</p>
                 </div>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>1</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>1</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">08:15<br />｜<br />09:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>
-                <p className="text-base">{post.table.day1[1].classname}</p>
+                <p className="text-lg">{post.table.day1[1].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[1]) }}>
-                <p className="text-base">{post.table.day2[1].classname}</p>
+                <p className="text-lg">{post.table.day2[1].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[1]) }}>
-                <p className="text-base">{post.table.day3[1].classname}</p>
+                <p className="text-lg">{post.table.day3[1].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[1]) }}>
-                <p className="text-base">{post.table.day4[1].classname}</p>
+                <p className="text-lg">{post.table.day4[1].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[1]) }}>
-                <p className="text-base">{post.table.day5[1].classname}</p>
+                <p className="text-lg">{post.table.day5[1].classname}</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>2</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>2</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">09:15<br />｜<br />10:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[2]) }}>
-                <p className="text-base">{post.table.day1[2].classname}</p>
+                <p className="text-lg">{post.table.day1[2].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[2]) }}>
-                <p className="text-base">{post.table.day2[2].classname}</p>
+                <p className="text-lg">{post.table.day2[2].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[2]) }}>
-                <p className="text-base">{post.table.day3[2].classname}</p>
+                <p className="text-lg">{post.table.day3[2].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[2]) }}>
-                <p className="text-base">{post.table.day4[2].classname}</p>
+                <p className="text-lg">{post.table.day4[2].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[2]) }}>
-                <p className="text-base">{post.table.day5[2].classname}</p>
+                <p className="text-lg">{post.table.day5[2].classname}</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>3</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>3</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">10:15<br />｜<br />11:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[3]) }}>
-                <p className="text-base">{post.table.day1[3].classname}</p>
+                <p className="text-lg">{post.table.day1[3].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[3]) }}>
-                <p className="text-base">{post.table.day2[3].classname}</p>
+                <p className="text-lg">{post.table.day2[3].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[3]) }}>
-                <p className="text-base">{post.table.day3[3].classname}</p>
+                <p className="text-lg">{post.table.day3[3].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day7[3]) }}>
-                <p className="text-base">{post.table.day4[3].classname}</p>
+                <p className="text-lg">{post.table.day4[3].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[3]) }}>
-                <p className="text-base">{post.table.day5[3].classname}</p>
+                <p className="text-lg">{post.table.day5[3].classname}</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>4</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>4</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">11:15<br />｜<br />12:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[4]) }}>
-                <p className="text-base">{post.table.day1[4].classname}</p>
+                <p className="text-lg">{post.table.day1[4].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[4]) }}>
-                <p className="text-base">{post.table.day2[4].classname}</p>
+                <p className="text-lg">{post.table.day2[4].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[4]) }}>
-                <p className="text-base">{post.table.day3[4].classname}</p>
+                <p className="text-lg">{post.table.day3[4].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[4]) }}>
-                <p className="text-base">{post.table.day4[4].classname}</p>
+                <p className="text-lg">{post.table.day4[4].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[4]) }}>
-                <p className="text-base">{post.table.day5[4].classname}</p>
+                <p className="text-lg">{post.table.day5[4].classname}</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>午</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>午</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">12:45<br />｜<br />13:15</th>
               <td colSpan="5" className="py-4 px-3 border-white border-b align-middle w-[18%]">
-                <p className="text-base">午休</p>
+                <p className="text-lg">午休</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>5</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>5</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">13:20<br />｜<br />14:10</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[5]) }}>
-                <p className="text-base">{post.table.day1[5].classname}</p>
+                <p className="text-lg">{post.table.day1[5].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[5]) }}>
-                <p className="text-base">{post.table.day2[5].classname}</p>
+                <p className="text-lg">{post.table.day2[5].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[5]) }}>
-                <p className="text-base">{post.table.day3[5].classname}</p>
+                <p className="text-lg">{post.table.day3[5].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[5]) }}>
-                <p className="text-base">{post.table.day4[5].classname}</p>
+                <p className="text-lg">{post.table.day4[5].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]">
-                <p className="text-base">X</p>{ /* {post.table.day5[5].classname} */}
+                <p className="text-lg">X</p>{ /* {post.table.day5[5].classname} */}
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>6</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>6</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">14:20<br />｜<br />15:10</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[6]) }}>
-                <p className="text-base">{post.table.day1[6].classname}</p>
+                <p className="text-lg">{post.table.day1[6].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[6]) }}>
-                <p className="text-base">{post.table.day2[6].classname}</p>
+                <p className="text-lg">{post.table.day2[6].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[6]) }}>
-                <p className="text-base">{post.table.day3[6].classname}</p>
+                <p className="text-lg">{post.table.day3[6].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[6]) }}>
-                <p className="text-base">{post.table.day4[6].classname}</p>
+                <p className="text-lg">{post.table.day4[6].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]">
-                <p className="text-base">X</p> { /* {post.table.day5[6].classname} */}
+                <p className="text-lg">X</p> { /* {post.table.day5[6].classname} */}
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>7</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>7</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">15:20<br />｜<br />16:10</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[7]) }}>
-                <p className="text-base">{post.table.day1[7].classname}</p>
+                <p className="text-lg">{post.table.day1[7].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[7]) }}>
-                <p className="text-base">{post.table.day2[7].classname}</p>
+                <p className="text-lg">{post.table.day2[7].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[7]) }}>
-                <p className="text-base">{post.table.day3[7].classname}</p>
+                <p className="text-lg">{post.table.day3[7].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[7]) }}>
-                <p className="text-base">{post.table.day4[7].classname}</p>
+                <p className="text-lg">{post.table.day4[7].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[7]) }}>
-                <p className="text-base">{post.table.day5[7].classname}</p>
+                <p className="text-lg">{post.table.day5[7].classname}</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r align-middle w-[5%] text-base" +　(isBigScreen ? "" : " hidden")}>8</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>8</th>
               <th scope="row" className="py-4 px-3 border-white border-r align-middle w-[5%]">16:20<br />｜<br />17:10</th>
               <td className="py-4 px-3 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[8]) }}>
-                <p className="text-base">{post.table.day1[8].classname}</p>
+                <p className="text-lg">{post.table.day1[8].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day2[8]) }}>
-                <p className="text-base">{post.table.day2[8].classname}</p>
+                <p className="text-lg">{post.table.day2[8].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day3[8]) }}>
-                <p className="text-base">{post.table.day3[8].classname}</p>
+                <p className="text-lg">{post.table.day3[8].classname}</p>
               </td>
               <td className="py-4 px-3 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[8]) }}>
-                <p className="text-base">{post.table.day4[8].classname}</p>
+                <p className="text-lg">{post.table.day4[8].classname}</p>
               </td>
               <td className="py-4 px-3 border-white align-middle w-[18%]">
-                <p className="text-base">X</p>{ /* {post.table.day5[8].classname} */}
+                <p className="text-lg">X</p>{ /* {post.table.day5[8].classname} */}
               </td>
             </tr>
           </tbody>
