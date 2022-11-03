@@ -1,9 +1,7 @@
 import React from "react"
 import axios from "axios";
 
-
 export default function Home() {
-
     const [ann, setAnn] = React.useState({ 'message': 'No Data' });
 
     React.useEffect(() => {
@@ -51,7 +49,7 @@ export default function Home() {
             <div className="flex flex-col my-auto items-center bgimg bg-cover">
                 <audio className='text-2xl items-center align-center' controls>
                     <source src="/voices/吳孟熹做愛.mp3" type="audio/mpeg" />
-                    您的瀏覽器不支援撥放聲音!
+                    您的瀏覽器不支援播放聲音!
                 </audio>
             </div>
             <br />

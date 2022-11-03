@@ -6,17 +6,17 @@ function NavBar() {
     const cookies = new Cookies();
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     const [loginMenu, setLoginMenu] = React.useState(false);
-    // const [colorMenu, setColorMenu] = React.useState(false);
+    const [colorMenu, setColorMenu] = React.useState(false);
 
-    // function ChangeColor(color) {
-    //     if (!localStorage.getItem('theme-color')) {
-    //         // console.log('No Theme Cookie, Color:' + color)
-    //         localStorage.setItem('theme-color', color)
-    //     } else {
-    //         localStorage.removeItem('theme-color')
-    //         localStorage.setItem('theme-color', color)
-    //     }
-    // }
+    function ChangeColor(color) {
+        if (!localStorage.getItem('theme-color')) {
+            // console.log('No Theme Cookie, Color:' + color)
+            localStorage.setItem('theme-color', color)
+        } else {
+            localStorage.removeItem('theme-color')
+            localStorage.setItem('theme-color', color)
+        }
+    }
 
     // const ChangeColor = (color) => {
     //     localStorage.setItem('theme-color', color)
@@ -88,7 +88,7 @@ function NavBar() {
                             測試頁面
                         </a>
                     </div>
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
                         {/* <div>
                             <button className={"text-white font-medium rounded-full text-sm px-3 py-3 text-center flex bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-600 hover:bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-600 md:hover:bg-" + (!localStorage.getItem('theme-color') ? "cyan" : localStorage.getItem('theme-color')) + "-700"} onClick={() => setColorMenu(!colorMenu)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-palette" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -118,15 +118,6 @@ function NavBar() {
                                 </div>
                             </div>
                         </div> */}
-
-                        { /* Color All Start */ }
-                        
-                        {/* <p className="bg-red-100 bg-red-200 bg-red-300 bg-red-400 bg-red-500 bg-red-600 bg-red-700 bg-red-800 bg-red-900"></p>
-                        <p className="bg-orange-100 bg-orange-200 bg-orange-300 bg-orange-400 bg-orange-500 bg-orange-600 bg-orange-700 bg-orange-800 bg-orange-900"></p>
-                        <p className="bg-yellow-100 bg-yellow-200 bg-yellow-300 bg-yellow-400 bg-yellow-500 bg-yellow-600 bg-yellow-700 bg-yellow-800 bg-yellow-900"></p> */}
-
-                        { /* Color All Ended */ }
-
                         <button className="text-white bg-cyan-600 font-medium rounded-full text-sm px-3 py-3 text-center flex md:hidden" onClick={() => setNavbarOpen(!navbarOpen)}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width="24"
                                 height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"

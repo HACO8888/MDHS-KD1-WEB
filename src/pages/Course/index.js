@@ -52,35 +52,40 @@ export default function Course() {
               </th>
               <th scope="col" className="py-3 px-6 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base">星期一</p>
+                  <p className="text-base md:inline hidden">星期一</p>
+                  <p className="text-base inline md:hidden">一</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-6 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base">星期二</p>
+                  <p className="text-base md:inline hidden">星期二</p>
+                  <p className="text-base inline md:hidden">二</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-6 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base">星期三</p>
+                  <p className="text-base md:inline hidden">星期三</p>
+                  <p className="text-base inline md:hidden">三</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-6 border-r border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base">星期四</p>
+                  <p className="text-base md:inline hidden">星期四</p>
+                  <p className="text-base inline md:hidden">四</p>
                 </div>
               </th>
               <th scope="col" className="py-3 px-6 border-b border-l w-auto align-middle">
                 <div className="flex items-center justify-center">
-                  <p className="text-base">星期五</p>
+                  <p className="text-base md:inline hidden">星期五</p>
+                  <p className="text-base inline md:hidden">五</p>
                 </div>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第一節</th>
-              <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">08:15<br />｜<br />09:05</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[3%] md:w-[5%] text-base">1</th>
+              <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[3%] md:w-[5%]">08:15<br />｜<br />09:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>
                 <p className="text-base">{post.table.day1[1].classname}</p>
               </td>
@@ -98,7 +103,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第二節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">2</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">09:15<br />｜<br />10:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[2]) }}>
                 <p className="text-base">{post.table.day1[2].classname}</p>
@@ -117,7 +122,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第三節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">3</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">10:15<br />｜<br />11:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[3]) }}>
                 <p className="text-base">{post.table.day1[3].classname}</p>
@@ -136,7 +141,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第四節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">4</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">11:15<br />｜<br />12:05</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[4]) }}>
                 <p className="text-base">{post.table.day1[4].classname}</p>
@@ -155,7 +160,14 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第五節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">午</th>
+              <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">12:45<br />｜<br />13:15</th>
+              <td colSpan="5" className="py-4 px-6 border-white border-b align-middle w-[18%]">
+                <p className="text-base">午休</p>
+              </td>
+            </tr>
+            <tr className="bg-cyan-500">
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">5</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">13:20<br />｜<br />14:10</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[5]) }}>
                 <p className="text-base">{post.table.day1[5].classname}</p>
@@ -174,7 +186,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第六節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">6</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">14:20<br />｜<br />15:10</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[6]) }}>
                 <p className="text-base">{post.table.day1[6].classname}</p>
@@ -193,7 +205,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">第七節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r border-b align-middle w-[5%] text-base">7</th>
               <th scope="row" className="py-4 px-6 border-white border-r border-b align-middle w-[5%]">15:20<br />｜<br />16:10</th>
               <td className="py-4 px-6 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[7]) }}>
                 <p className="text-base">{post.table.day1[7].classname}</p>
@@ -212,7 +224,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r align-middle w-[5%] text-base">第八節</th>
+              <th scope="row" className="py-4 px-6 font-medium text-white border-white border-r align-middle w-[5%] text-base">8</th>
               <th scope="row" className="py-4 px-6 border-white border-r align-middle w-[5%]">16:20<br />｜<br />17:10</th>
               <td className="py-4 px-6 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[8]) }}>
                 <p className="text-base">{post.table.day1[8].classname}</p>
