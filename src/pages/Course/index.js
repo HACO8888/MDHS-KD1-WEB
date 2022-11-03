@@ -29,6 +29,8 @@ export default function Course() {
     var dataString = JSON.stringify(data);
     const replacements = [
         // ["-", " "],
+        ["A", ""],
+        ["B", ""],
         ["技高課內社團", "課內社團"],
         ["Javascript", "JS"],
         ["\\(輔\\)", ""],
@@ -38,7 +40,7 @@ export default function Course() {
         ["物理B", "物理"],
         ["國語文", "國文"],
         ["英語文", "英文"],
-        ["英語會話", "ESL "],
+        ["英語會話", "ESL"],
         ["基本電學", "電學"],
         ["基礎電子", "電子"],
         ["電腦繪圖", "電繪"],
@@ -282,8 +284,8 @@ export default function Course() {
               <td className="py-4 px-3 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day4[8]) }}>
                 <p className="text-lg">{post.table.day4[8].classname}</p>
               </td>
-              <td className="py-4 px-3 border-white align-middle w-[18%]">
-                <p className="text-lg">X</p>{ /* {post.table.day5[8].classname} */}
+              <td className="py-4 px-3 border-white align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day5[8]) }}>
+                <p className="text-lg">{post.table.day5[8].classname}</p>
               </td>
             </tr>
           </tbody>
