@@ -28,32 +28,31 @@ export default function Course() {
   const shortenData = (data) => {
     var dataString = JSON.stringify(data);
     const replacements = [
-        // ["-", " "],
-        ["A", ""],
-        ["B", ""],
-        ["技高課內社團", "課內社團"],
-        ["Javascript", "JS"],
-        ["\\(輔\\)", ""],
-        ["全民國防教育", "國防"],
-        ["健康與護理", "健康"],
-        ["生涯規劃", "輔導"],
-        ["物理B", "物理"],
-        ["國語文", "國文"],
-        ["英語文", "英文"],
-        ["英語會話", "ESL"],
-        ["基本電學", "電學"],
-        ["基礎電子", "電子"],
-        ["電腦繪圖", "電繪"],
-        ["程式語言", "程式"],
-        ["團體活動\\(班會\\)", "班會"]
+      // ["-", " "],
+      ["A", ""],
+      ["B", ""],
+      ["技高課內社團", "課內社團"],
+      ["Javascript", "JS"],
+      ["\\(輔\\)", ""],
+      ["全民國防教育", "國防"],
+      ["健康與護理", "健康"],
+      ["生涯規劃", "輔導"],
+      ["國語文", "國文"],
+      ["英語文", "英文"],
+      ["英語會話", "ESL"],
+      ["基本電學", "電學"],
+      ["基礎電子", "電子"],
+      ["電腦繪圖", "電繪"],
+      ["程式語言", "程式"],
+      ["團體活動\\(班會\\)", "班會"]
     ];
 
     for (let replacement of replacements) {
-        dataString = dataString.replace(new RegExp(replacement[0], "gm"), replacement[1]);
+      dataString = dataString.replace(new RegExp(replacement[0], "gm"), replacement[1]);
     };
 
     return JSON.parse(dataString);
-}
+  }
 
   React.useEffect(() => {
     axios.get("https://cloud.newmd.eu.org/database/read",
@@ -68,6 +67,7 @@ export default function Course() {
     ).then((response) => {
       // console.log("API Response:" + response.status + " => " + response.statusText)
       setPost(shortenData(response.data));
+      // console.log(JSON.stringify(post))
     });
 
     function handleResize() {
@@ -130,7 +130,7 @@ export default function Course() {
           </thead>
           <tbody>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>1</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>1</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">08:15<br />｜<br />09:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[1]) }}>
                 <p className="text-lg">{post.table.day1[1].classname}</p>
@@ -149,7 +149,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>2</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>2</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">09:15<br />｜<br />10:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[2]) }}>
                 <p className="text-lg">{post.table.day1[2].classname}</p>
@@ -168,7 +168,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>3</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>3</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">10:15<br />｜<br />11:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[3]) }}>
                 <p className="text-lg">{post.table.day1[3].classname}</p>
@@ -187,7 +187,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>4</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>4</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">11:15<br />｜<br />12:05</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[4]) }}>
                 <p className="text-lg">{post.table.day1[4].classname}</p>
@@ -206,14 +206,14 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>午</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>午</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">12:45<br />｜<br />13:15</th>
               <td colSpan="5" className="py-4 px-3 border-white border-b align-middle w-[18%]">
                 <p className="text-lg">午休</p>
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>5</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>5</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">13:20<br />｜<br />14:10</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[5]) }}>
                 <p className="text-lg">{post.table.day1[5].classname}</p>
@@ -232,7 +232,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>6</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>6</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">14:20<br />｜<br />15:10</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[6]) }}>
                 <p className="text-lg">{post.table.day1[6].classname}</p>
@@ -251,7 +251,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>7</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r border-b align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>7</th>
               <th scope="row" className="py-4 px-3 border-white border-r border-b align-middle w-[5%]">15:20<br />｜<br />16:10</th>
               <td className="py-4 px-3 border-white border-r border-b align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[7]) }}>
                 <p className="text-lg">{post.table.day1[7].classname}</p>
@@ -270,7 +270,7 @@ export default function Course() {
               </td>
             </tr>
             <tr className="bg-cyan-500">
-              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r align-middle w-[5%] text-lg" +　(isBigScreen ? "" : " hidden")}>8</th>
+              <th scope="row" className={"py-4 px-3 font-medium text-white border-white border-r align-middle w-[5%] text-lg" + (isBigScreen ? "" : " hidden")}>8</th>
               <th scope="row" className="py-4 px-3 border-white border-r align-middle w-[5%]">16:20<br />｜<br />17:10</th>
               <td className="py-4 px-3 border-white border-r align-middle w-[18%]" onClick={() => { setModalShow(!modalShow); setTable(post.table.day1[8]) }}>
                 <p className="text-lg">{post.table.day1[8].classname}</p>
@@ -331,356 +331,7 @@ export default function Course() {
 function Read() {
   return (
     {
-      "table": {
-        "day1": {
-          "1": {
-            "classname": "體育",
-            "teacher": "林筠棋",
-            "classID": "2041956",
-            "meet": "https://meet.google.com/ckg-sxmp-dnb",
-            "classroom": "srf4pzg"
-          },
-          "2": {
-            "classname": "體育",
-            "teacher": "林筠棋",
-            "classID": "2041973",
-            "meet": "https://meet.google.com/ckg-sxmp-dnb",
-            "classroom": "srf4pzg"
-          },
-          "3": {
-            "classname": "基本電學",
-            "teacher": "林順進",
-            "classID": "2016767",
-            "meet": "https://meet.google.com/bjn-jzxn-wtn",
-            "classroom": "vgxtrvn"
-          },
-          "4": {
-            "classname": "數學",
-            "teacher": "邱立璿",
-            "classID": "1982525",
-            "meet": "https://meet.google.com/znm-hbjm-tba",
-            "classroom": "yiafrez"
-          },
-          "5": {
-            "classname": "音樂",
-            "teacher": "劉孟穎",
-            "classID": "2071902",
-            "meet": "https://meet.google.com/vxv-foax-aof",
-            "classroom": "ualpcwx"
-          },
-          "6": {
-            "classname": "基礎電子實習",
-            "teacher": "黃凱威",
-            "classID": "2017459",
-            "meet": "https://meet.google.com/obr-jvhx-owr",
-            "classroom": "n5sz7dd"
-          },
-          "7": {
-            "classname": "基礎電子實習",
-            "teacher": "黃凱威",
-            "classID": "2017476",
-            "meet": "https://meet.google.com/obr-jvhx-owr",
-            "classroom": "n5sz7dd"
-          },
-          "8": {
-            "classname": "基礎電子實習(輔)",
-            "teacher": "黃凱威",
-            "classID": "2017493",
-            "meet": "https://meet.google.com/obr-jvhx-owr",
-            "classroom": "n5sz7dd"
-          }
-        },
-        "day2": {
-          "1": {
-            "classname": "國語文",
-            "teacher": "賴佩琳",
-            "classID": "1945528",
-            "meet": "https://meet.google.com/jhn-oghj-vqn",
-            "classroom": "lsbr6d2"
-          },
-          "2": {
-            "classname": "基本電學實習",
-            "teacher": "柯尚仁",
-            "classID": "2016887",
-            "meet": "https://meet.google.com/opn-ubpu-faj",
-            "classroom": "64znh35"
-          },
-          "3": {
-            "classname": "基本電學實習",
-            "teacher": "柯尚仁",
-            "classID": "2016908",
-            "meet": "https://meet.google.com/opn-ubpu-faj",
-            "classroom": "64znh35"
-          },
-          "4": {
-            "classname": "基本電學實習",
-            "teacher": "柯尚仁",
-            "classID": "2016929",
-            "meet": "https://meet.google.com/opn-ubpu-faj",
-            "classroom": "64znh35"
-          },
-          "5": {
-            "classname": "數學",
-            "teacher": "邱立璿",
-            "classID": "1982543",
-            "meet": "https://meet.google.com/znm-hbjm-tba",
-            "classroom": "yiafrez"
-          },
-          "6": {
-            "classname": "歷史",
-            "teacher": "蘇博群",
-            "classID": "1996268",
-            "meet": "https://meet.google.com/thg-danj-ban",
-            "classroom": "ut3fppi"
-          },
-          "7": {
-            "classname": "物理B",
-            "teacher": "陳永富",
-            "classID": "2004030",
-            "meet": "https://meet.google.com/tyy-nvyn-yoh",
-            "classroom": "eknfkc4"
-          },
-          "8": {
-            "classname": "英語文(輔)",
-            "teacher": "楊右銘",
-            "classID": "2071882",
-            "meet": "https://meet.google.com/zgx-ervc-ocz?authuser=0",
-            "classroom": "2jdhkzl"
-          }
-        },
-        "day3": {
-          "1": {
-            "classname": "電腦繪圖實習",
-            "teacher": "蔡椿華",
-            "classID": "2017199",
-            "meet": "https://meet.google.com/bfo-bghy-uqk",
-            "classroom": "3ibn6al"
-          },
-          "2": {
-            "classname": "電腦繪圖實習",
-            "teacher": "蔡椿華",
-            "classID": "2017220",
-            "meet": "https://meet.google.com/bfo-bghy-uqk",
-            "classroom": "3ibn6al"
-          },
-          "3": {
-            "classname": "物理B",
-            "teacher": "陳永富",
-            "classID": "2004009",
-            "meet": "https://meet.google.com/tyy-nvyn-yoh",
-            "classroom": "eknfkc4"
-          },
-          "4": {
-            "classname": "彈性學習",
-            "teacher": "楊右銘",
-            "classID": "2071920",
-            "meet": "https://meet.google.com/zgx-ervc-ocz?authuser=0",
-            "classroom": "2jdhkzl"
-          },
-          "5": {
-            "classname": "美術",
-            "teacher": "施正堂",
-            "classID": "1932307",
-            "meet": "https://meet.google.com/uku-sbpi-zai",
-            "classroom": "nkqeua4"
-          },
-          "6": {
-            "classname": "基本電學",
-            "teacher": "林順進",
-            "classID": "2016785",
-            "meet": "https://meet.google.com/bjn-jzxn-wtn",
-            "classroom": "vgxtrvn"
-          },
-          "7": {
-            "classname": "基本電學",
-            "teacher": "林順進",
-            "classID": "2016806",
-            "meet": "https://meet.google.com/bjn-jzxn-wtn",
-            "classroom": "vgxtrvn"
-          },
-          "8": {
-            "classname": "國語文(輔)",
-            "teacher": "賴佩琳",
-            "classID": "1945549",
-            "meet": "https://meet.google.com/jhn-oghj-vqn",
-            "classroom": "lsbr6d2"
-          }
-        },
-        "day4": {
-          "1": {
-            "classname": "歷史",
-            "teacher": "蘇博群",
-            "classID": "1996289",
-            "meet": "https://meet.google.com/thg-danj-ban",
-            "classroom": "ut3fppi"
-          },
-          "2": {
-            "classname": "生活科技",
-            "teacher": "茆育詠",
-            "classID": "2049961",
-            "meet": "https://meet.google.com/kra-hrye-kgt",
-            "classroom": "xmclnio"
-          },
-          "3": {
-            "classname": "國語文",
-            "teacher": "賴佩琳",
-            "classID": "1945570",
-            "meet": "https://meet.google.com/jhn-oghj-vqn",
-            "classroom": "lsbr6d2"
-          },
-          "4": {
-            "classname": "生涯規劃",
-            "teacher": "余文壇",
-            "classID": "2048545",
-            "meet": "https://meet.google.com/rjj-xtjj-xda?authuser=0",
-            "classroom": "s3qrkmc"
-          },
-          "5": {
-            "classname": "數學",
-            "teacher": "邱立璿",
-            "classID": "1982564",
-            "meet": "https://meet.google.com/znm-hbjm-tba",
-            "classroom": "yiafrez"
-          },
-          "6": {
-            "classname": "英語文",
-            "teacher": "楊右銘",
-            "classID": "1964391",
-            "meet": "https://meet.google.com/zgx-ervc-ocz?authuser=0",
-            "classroom": "2jdhkzl"
-          },
-          "7": {
-            "classname": "程式語言",
-            "teacher": "呂信寬",
-            "classID": "2017001",
-            "meet": "https://meet.google.com/ktt-zbey-sno",
-            "classroom": "2by5qbn"
-          },
-          "8": {
-            "classname": "程式語言(輔)",
-            "teacher": "呂信寬",
-            "classID": "2017022",
-            "meet": "https://meet.google.com/ktt-zbey-sno",
-            "classroom": "2by5qbn"
-          }
-        },
-        "day5": {
-          "1": {
-            "classname": "數學",
-            "teacher": "邱立璿",
-            "classID": "1982584",
-            "meet": "https://meet.google.com/znm-hbjm-tba",
-            "classroom": "yiafrez"
-          },
-          "2": {
-            "classname": "英語文",
-            "teacher": "楊右銘",
-            "classID": "1964370",
-            "meet": "https://meet.google.com/zgx-ervc-ocz?authuser=0",
-            "classroom": "2jdhkzl"
-          },
-          "3": {
-            "classname": "全民國防教育",
-            "teacher": "沈文偉",
-            "classID": "2016208",
-            "meet": "https://meet.google.com/yzg-vowh-xqj",
-            "classroom": "nsbz4ge"
-          },
-          "4": {
-            "classname": "健康與護理",
-            "teacher": "陳怡如",
-            "classID": "2047440",
-            "meet": "https://meet.google.com/poz-mtpj-nuy",
-            "classroom": "s4c22uy"
-          },
-          "5": {
-            "classname": "技高課內社團-Javascript起步走",
-            "teacher": "周祜民",
-            "classID": "2058422",
-            "meet": "",
-            "classroom": ""
-          },
-          "6": {
-            "classname": "技高課內社團-Javascript起步走",
-            "teacher": "周祜民",
-            "classID": "2058431",
-            "meet": "",
-            "classroom": ""
-          },
-          "7": {
-            "classname": "團體活動(班會)",
-            "teacher": "呂信寬",
-            "classID": "1929467",
-            "meet": "https://meet.google.com/gey-yzmu-hrj",
-            "classroom": "gjblb6j"
-          },
-          "8": {
-            "classname": "英語會話A(輔)",
-            "teacher": "Paul",
-            "classID": "1965273",
-            "meet": "https://meet.google.com/vta-jmmk-wcn",
-            "classroom": "3udljmv"
-          }
-        },
-        "day6": {
-          "1": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "2": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "3": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "4": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "5": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "6": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "7": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          },
-          "8": {
-            "classname": "",
-            "teacher": "",
-            "classID": "",
-            "meet": "",
-            "classroom": ""
-          }
-        }
-      }
+      "table": { "day1": { "1": { "classname": "體育", "teacher": "黃俊嘉", "classID": "2041958", "meet": "https://meet.google.com/ckg-sxmp-dnb", "classroom": "srf4pzg" }, "2": { "classname": "體育", "teacher": "黃俊嘉", "classID": "2041975", "meet": "https://meet.google.com/ckg-sxmp-dnb", "classroom": "srf4pzg" }, "3": { "classname": "國防", "teacher": "沈文偉", "classID": "2016212", "meet": "https://meet.google.com/yzg-vowh-xqj", "classroom": "nsbz4ge" }, "4": { "classname": "數學", "teacher": "邱立璿", "classID": "1982527", "meet": "https://meet.google.com/znm-hbjm-tba", "classroom": "yiafrez" }, "5": { "classname": "音樂", "teacher": "劉孟穎", "classID": "2071904", "meet": "https://meet.google.com/vxv-foax-aof", "classroom": "ualpcwx" }, "6": { "classname": "電子實習", "teacher": "黃凱威", "classID": "2017461", "meet": "https://meet.google.com/obr-jvhx-owr", "classroom": "n5sz7dd" }, "7": { "classname": "電子實習", "teacher": "黃凱威", "classID": "2017478", "meet": "https://meet.google.com/obr-jvhx-owr", "classroom": "n5sz7dd" }, "8": { "classname": "電子實習", "teacher": "黃凱威", "classID": "2017495", "meet": "https://meet.google.com/obr-jvhx-owr", "classroom": "n5sz7dd" } }, "day2": { "1": { "classname": "國文", "teacher": "陳聯華", "classID": "1945532", "meet": "https://meet.google.com/jhn-oghj-vqn", "classroom": "lsbr6d2" }, "2": { "classname": "電學實習", "teacher": "柯尚仁", "classID": "2016891", "meet": "https://meet.google.com/opn-ubpu-faj", "classroom": "64znh35" }, "3": { "classname": "電學實習", "teacher": "柯尚仁", "classID": "2016912", "meet": "https://meet.google.com/opn-ubpu-faj", "classroom": "64znh35" }, "4": { "classname": "電學實習", "teacher": "柯尚仁", "classID": "2016933", "meet": "https://meet.google.com/opn-ubpu-faj", "classroom": "64znh35" }, "5": { "classname": "數學", "teacher": "邱立璿", "classID": "1982547", "meet": "https://meet.google.com/znm-hbjm-tba", "classroom": "yiafrez" }, "6": { "classname": "歷史", "teacher": "蘇博群", "classID": "1996272", "meet": "https://meet.google.com/thg-danj-ban", "classroom": "ut3fppi" }, "7": { "classname": "物理", "teacher": "陳永富", "classID": "2004034", "meet": "https://meet.google.com/tyy-nvyn-yoh", "classroom": "eknfkc4" }, "8": { "classname": "英文", "teacher": "楊右銘", "classID": "2071886", "meet": "https://meet.google.com/zgx-ervc-ocz", "classroom": "2jdhkzl" } }, "day3": { "1": { "classname": "電繪實習", "teacher": "蔡椿華", "classID": "2017203", "meet": "https://meet.google.com/bfo-bghy-uqk", "classroom": "3ibn6al" }, "2": { "classname": "電繪實習", "teacher": "蔡椿華", "classID": "2017224", "meet": "https://meet.google.com/bfo-bghy-uqk", "classroom": "3ibn6al" }, "3": { "classname": "物理", "teacher": "陳永富", "classID": "2004013", "meet": "https://meet.google.com/tyy-nvyn-yoh", "classroom": "eknfkc4" }, "4": { "classname": "彈性學習", "teacher": "楊右銘", "classID": "2071924", "meet": "https://meet.google.com/zgx-ervc-ocz", "classroom": "2jdhkzl" }, "5": { "classname": "美術", "teacher": "馮天文", "classID": "1932311", "meet": "https://meet.google.com/uku-sbpi-zai", "classroom": "nkqeua4" }, "6": { "classname": "電學", "teacher": "林順進", "classID": "2016789", "meet": "https://meet.google.com/bjn-jzxn-wtn", "classroom": "vgxtrvn" }, "7": { "classname": "電學", "teacher": "林順進", "classID": "2016810", "meet": "https://meet.google.com/bjn-jzxn-wtn", "classroom": "vgxtrvn" }, "8": { "classname": "國文", "teacher": "陳聯華", "classID": "1945553", "meet": "https://meet.google.com/jhn-oghj-vqn", "classroom": "lsbr6d2" } }, "day4": { "1": { "classname": "歷史", "teacher": "蘇博群", "classID": "1996293", "meet": "https://meet.google.com/thg-danj-ban", "classroom": "ut3fppi" }, "2": { "classname": "生活科技", "teacher": "茆育詠", "classID": "2049965", "meet": "https://meet.google.com/kra-hrye-kgt", "classroom": "xmclnio" }, "3": { "classname": "國文", "teacher": "陳聯華", "classID": "1945574", "meet": "https://meet.google.com/jhn-oghj-vqn", "classroom": "lsbr6d2" }, "4": { "classname": "輔導", "teacher": "余文壇", "classID": "2048549", "meet": "https://meet.google.com/rjj-xtjj-xda", "classroom": "s3qrkmc" }, "5": { "classname": "數學", "teacher": "邱立璿", "classID": "1982568", "meet": "https://meet.google.com/znm-hbjm-tba", "classroom": "yiafrez" }, "6": { "classname": "英文", "teacher": "楊右銘", "classID": "1964395", "meet": "https://meet.google.com/zgx-ervc-ocz", "classroom": "2jdhkzl" }, "7": { "classname": "程式", "teacher": "呂信寬", "classID": "2017005", "meet": "https://meet.google.com/ktt-zbey-sno", "classroom": "2by5qbn" }, "8": { "classname": "程式", "teacher": "呂信寬", "classID": "2017026", "meet": "https://meet.google.com/ktt-zbey-sno", "classroom": "2by5qbn" } }, "day5": { "1": { "classname": "數學", "teacher": "邱立璿", "classID": "1982588", "meet": "https://meet.google.com/znm-hbjm-tba", "classroom": "yiafrez" }, "2": { "classname": "英文", "teacher": "楊右銘", "classID": "1964374", "meet": "https://meet.google.com/zgx-ervc-ocz", "classroom": "2jdhkzl" }, "3": { "classname": "電學", "teacher": "林順進", "classID": "2016769", "meet": "https://meet.google.com/bjn-jzxn-wtn", "classroom": "vgxtrvn" }, "4": { "classname": "健康", "teacher": "陳怡如", "classID": "2047444", "meet": "https://meet.google.com/poz-mtpj-nuy", "classroom": "s4c22uy" }, "5": { "classname": "課內社團-JS起步走", "teacher": "周祜民", "classID": "2058424", "meet": "", "classroom": "" }, "6": { "classname": "課內社團-JS起步走", "teacher": "周祜民", "classID": "2058433", "meet": "", "classroom": "" }, "7": { "classname": "班會", "teacher": "呂信寬", "classID": "1929471", "meet": "https://meet.google.com/gey-yzmu-hrj", "classroom": "gjblb6j" }, "8": { "classname": "ESL", "teacher": "Paul", "classID": "1965277", "meet": "https://meet.google.com/vta-jmmk-wcn", "classroom": "3udljmv" } }, "day6": { "1": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "2": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "3": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "4": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "5": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "6": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "7": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" }, "8": { "classname": "", "teacher": "", "classID": "", "meet": "", "classroom": "" } } }
     }
   )
 }
