@@ -85,7 +85,7 @@ export default function Course() {
     <>
       <br />
       <br />
-      <h1 className="text-5xl select-none">本學期課表</h1>
+      <h1 className="text-5xl select-none">本週期課表</h1>
       <br />
       <br />
       <div className="overflow-x-auto relative sm:rounded-lg w-full md:w-[60%] md:ml-[20%] select-none ">
