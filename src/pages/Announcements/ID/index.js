@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react"
 import axios from "axios";
+import { Base64 } from 'js-base64';
 
 export default function Home() {
+
     const [ann, setAnn] = React.useState({ 'message': 'No Data' });
 
     React.useEffect(() => {
@@ -14,6 +17,7 @@ export default function Home() {
             });
         // eslint-disable-next-line
     }, []);
+
 
 
     return (
@@ -46,11 +50,8 @@ export default function Home() {
             <br />
             <p className='text-3xl text-cyan-300'>播放公告</p>
             <br />
-            <div className="flex flex-col my-auto items-center bgimg bg-cover">
-                <audio className='text-2xl items-center align-center' controls>
-                    <source src="/voices/吳孟熹做愛.mp3" type="audio/mpeg" />
-                    您的瀏覽器不支援播放聲音!
-                </audio>
+            <div className="w-auto ml-auto md:w-1/2 md:ml-[25%]">
+                <iframe src={"https://api.kd1.haco.tw/tts/" + (Base64.encode(ann.Content, true))} className="w-[100%]"></iframe>
             </div>
             <br />
             <br />
