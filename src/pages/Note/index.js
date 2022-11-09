@@ -7,6 +7,7 @@ export default function Note() {
     const [publicShow, setPublicShow] = useState(false);
     // const [privateShow, setPrivateShow] = useState(false);
     const [notes, setNotes] = React.useState([{ "ID": "No Data", "Title": "No Data", "Content": "No Data", "Type": "No Data" }]);
+    const [notes2, setNotes2] = React.useState([{ "ID": "No Data", "Title": "No Data", "Content": "No Data", "Type": "No Data" }]);
 
     React.useEffect(() => {
         axios
