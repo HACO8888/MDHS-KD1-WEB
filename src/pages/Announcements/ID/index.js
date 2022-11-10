@@ -59,7 +59,7 @@ export default function Home() {
             <br />
             <p className='text-3xl text-cyan-300'>播放公告</p>
             <br />
-            <div class="flex flex-row justify-center items-center md:w-[50%] md:ml-[25%]">
+            <div className="flex flex-row justify-center items-center md:w-[50%] md:ml-[25%]">
                 <iframe src={"https://api.kd1.haco.tw/tts/" + (Base64.encode(ann.Content, true))} className="flex items-center justify-center w-full ml-auto"></iframe>
             </div>
             <br />
