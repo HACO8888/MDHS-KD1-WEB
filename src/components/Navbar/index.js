@@ -78,7 +78,7 @@ function NavBar() {
                             </svg>
                             班級記事
                         </a>
-                        <a href="/test" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
+                        {/* <a href="/test" className="text-white px-5 py-3 rounded-md flex hover:bg-white/5 noSelect">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <polyline points="7 8 3 12 7 16"></polyline>
@@ -86,7 +86,7 @@ function NavBar() {
                                 <line x1="14" y1="4" x2="10" y2="20"></line>
                             </svg>
                             測試頁面
-                        </a>
+                        </a> */}
                     </div>
                     <div className="flex gap-2">
                         {/* <div>
@@ -198,7 +198,7 @@ function NavBar() {
                             </svg>
                             班級記事
                         </a>
-                        <a href="/test" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
+                        {/* <a href="/test" className="hover:text-gray-300 text-gray-300 hover:bg-white/5 px-3 py-2 rounded-md flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <polyline points="7 8 3 12 7 16"></polyline>
@@ -206,7 +206,7 @@ function NavBar() {
                                 <line x1="14" y1="4" x2="10" y2="20"></line>
                             </svg>
                             測試頁面
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </nav >

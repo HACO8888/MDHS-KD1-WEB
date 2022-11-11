@@ -6,8 +6,17 @@ import Button from 'react-bootstrap/Button';
 export default function Note() {
     const [publicShow, setPublicShow] = useState(false);
     // const [privateShow, setPrivateShow] = useState(false);
+    const [isBigScreen, setIsBigScreen] = React.useState(getWindowDimensions().width > 930);
     const [notes, setNotes] = React.useState([{ "ID": "No Data", "Title": "No Data", "Content": "No Data", "Type": "No Data" }]);
     const [notes2, setNotes2] = React.useState(null);
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+            width,
+            height
+        };
+    }
 
     React.useEffect(() => {
         axios
@@ -38,6 +47,12 @@ export default function Note() {
                     }
                 }
             });
+        function handleResize() {
+            setIsBigScreen(getWindowDimensions().width > 1024);
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const Html = [];
@@ -45,14 +60,14 @@ export default function Note() {
         for (var i = 1; i < notes.length; i += 3) {
             Html.push(
                 <>
-                    <div className='md:w-[70%] md:ml-[15%] md:flex align-middle text-center'>
+                    <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i - 1].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes[i - 1].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i - 1].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i - 1].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i - 1].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -61,9 +76,9 @@ export default function Note() {
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes[i].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -72,9 +87,9 @@ export default function Note() {
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i + 1].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes[i + 1].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i + 1].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i + 1].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i + 1].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -87,14 +102,14 @@ export default function Note() {
         for (var i = 0; i < notes.length; i += 3) {
             Html.push(
                 <>
-                    <div className='md:w-[70%] md:ml-[15%] md:flex align-middle text-center'>
+                    <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes[i].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -103,9 +118,9 @@ export default function Note() {
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i + 1].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes[i + 1].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i + 1].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i + 1].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i + 1].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -114,9 +129,9 @@ export default function Note() {
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i + 2].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes[i + 2].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i + 2].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i + 2].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes[i + 2].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -128,14 +143,14 @@ export default function Note() {
         if (notes2.length === 1) {
             Html.push(
                 <>
-                    <div className='md:w-[70%] md:ml-[15%] md:flex align-middle text-center'>
+                    <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes2[0].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes2[0].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes2[0].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes2[0].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes2[0].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -146,14 +161,14 @@ export default function Note() {
         } else if (notes2.length === 2) {
             Html.push(
                 <>
-                    <div className='md:w-[70%] md:ml-[15%] md:flex align-middle text-center'>
+                    <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes2[1].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes2[1].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes2[1].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes2[1].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes2[1].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -162,9 +177,9 @@ export default function Note() {
                             <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes2[0].Title.slice(0, 11)}</h5>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[100px] break-all text-left">{notes2[0].Content.slice(0, 70)}</p>
+                                <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes2[0].Content}</p>
                                 <div className="p-2 border-gray-600 select-none w-[100%]">
-                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes2[0].Content.length > 70) ? false : true)}>繼續閱讀</button></a>
+                                    <a><button className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center disabled:opacity-40 disabled:bg-cyan-600 disabled:hover:bg-cyan-600" disabled={((notes2[0].Content.length > 110) ? false : true)}>繼續閱讀</button></a>
                                 </div>
                             </div>
                         </div>
@@ -220,16 +235,16 @@ export default function Note() {
                                     </div>
                                     <div>
                                         <label htmlFor="title" className="text-xl block mb-2 font-medium ext-white">筆記標題</label>
-                                        <input name="title" id="title" className="text-left border text-lg rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="吳孟熹幹你媽" maxLength="11" required />
+                                        <input name="title" id="title" className="text-left border text-lg rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="請輸入您要提交的標題" maxLength="11" required />
                                     </div>
                                     <div>
                                         <label htmlFor="content" className="block mb-2 text-xl font-medium text-white">筆記內容</label>
-                                        <textarea name="content" id="content" placeholder="吳孟熙跟你媽做愛是怎么回事呢？吳孟熙相信大家都很熟悉，但是吳孟熙跟你媽做愛是怎么回事呢，下面就让小编带大家一起了解吧。吳孟熙跟你媽做愛，其实就是幹妳媽，大家可能会很惊讶吳孟熙怎么会跟你媽做愛呢？但事实就是这样，小编也感到非常惊讶。这就是关于吳孟熙跟你媽做愛的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！" className="text-left resize-none h-[150px] border text-lg rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" required />
+                                        <textarea name="content" id="content" placeholder="請輸入您要提交的內容" className="text-left resize-none h-[150px] border text-lg rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" required />
                                     </div>
                                     <br />
                                 </div>
                                 <div className="p-6 space-x-4 rounded-b border-t border-gray-600 select-none w-[100%]">
-                                    <button type="submit" className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center">送出筆記</button>
+                                    <button type="submit" className="w-full text-white bg-cyan-600 hover:bg-cyan-700 font-medium rounded-lg text-base px-5 py-2.5 text-center">提交筆記</button>
                                 </div>
                             </form>
                         </div>
