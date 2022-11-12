@@ -62,7 +62,7 @@ export default function Note() {
                 <>
                     <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none w-[auto]" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i - 1].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i - 1].Content}</p>
@@ -73,7 +73,7 @@ export default function Note() {
                         </div>
                         <br className='md:hidden' />
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:ml-[2%] md:mr-[2%] md:max-w-[32%]">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i].Content}</p>
@@ -84,7 +84,7 @@ export default function Note() {
                         </div>
                         <br className='md:hidden' />
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%]">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i + 1].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i + 1].Content}</p>
@@ -104,7 +104,7 @@ export default function Note() {
                 <>
                     <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i].Content}</p>
@@ -115,7 +115,7 @@ export default function Note() {
                         </div>
                         <br className='md:hidden' />
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:ml-[2%] md:mr-[2%] md:max-w-[32%]">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i + 1].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i + 1].Content}</p>
@@ -126,7 +126,7 @@ export default function Note() {
                         </div>
                         <br className='md:hidden' />
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%]">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes[i + 2].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes[i + 2].Content}</p>
@@ -145,7 +145,7 @@ export default function Note() {
                 <>
                     <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes2[0].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes2[0].Content}</p>
@@ -163,7 +163,7 @@ export default function Note() {
                 <>
                     <div className={'md:flex align-middle text-center' + (isBigScreen ? ' md:w-[70%] md:ml-[15%]' : ' md:w-[95%] md:ml-[2.5%]')}>
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:max-w-[32%] ">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes2[1].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes2[1].Content}</p>
@@ -174,7 +174,7 @@ export default function Note() {
                         </div>
                         <br className='md:hidden' />
                         <div className="rounded-lg border shadow-md bg-gray-800 border-gray-700 md:flex-auto md:ml-[2%] md:mr-[2%] md:max-w-[32%]">
-                            <img className="rounded-t-lg" src="/pictures/920x613.jpg" alt="" />
+                            <img className="rounded-t-lg object-none" src="/pictures/430x180.jpg" alt="" />
                             <div className="p-5">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{notes2[0].Title.slice(0, 11)}</h5>
                                 <p className="mb-3 font-normal text-lg text-gray-700 dark:text-gray-400 h-[100px] break-all overflow-ellipsis overflow-hidden text-left">{notes2[0].Content}</p>
